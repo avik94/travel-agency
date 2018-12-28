@@ -17,4 +17,9 @@ class Main extends CI_Controller {
 		$data['siteData'] = $this->Main_model->getOneRow('sitedata');
 		$this->load->template('common/header','about','common/footer', $data);
 	}
+	public function destination(){
+		$data['active']='destination';
+		$data['siteData'] = $this->Main_model->getOneRow('sitedata');
+		$this->load->template('common/header','destination/all-destination','common/footer', $data);
+	}
 }

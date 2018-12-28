@@ -19,6 +19,7 @@
   <link href="<?= base_url('admin/assets/'); ?>css/select2.css" rel="stylesheet">
   <link href="<?= base_url('admin/assets/'); ?>css/smoothness/jquery-ui-1.10.0.custom.css" rel="stylesheet">
   <link href="<?= base_url('admin/assets/'); ?>css/style.css" rel="stylesheet">
+  <link href="<?= base_url('admin/assets/'); ?>css/custom.css" rel="stylesheet">
 
   <!-- JS Files -->
   <script src="<?= base_url('admin/assets/'); ?>js/jquery.js"></script>
@@ -87,9 +88,9 @@
 
               <ul class="nav navbar-nav sf-menu clearfix">
                 <li <?php if($active == 'home'): echo 'class="active"'; endif; ?>><a href="<?= base_url(); ?>">Home</a></li>
-                <li <?php if($active == 'about'): echo 'class="active"'; endif; ?>><a href="#">About Us</a></li>
+                <li <?php if($active == 'about'): echo 'class="active"'; endif; ?>><a href="<?= base_url(); ?>about">About Us</a></li>
                 <li><a href="#">Gallery</a></li>
-                <li><a href="#">Destinations</a></li>
+                <li <?php if($active == 'destination'): echo 'class="active"'; endif; ?>><a href="<?= base_url();?>destinations">Destinations</a></li>
                 <li><a href="hotels.html">Hotels</a></li>
                 <li><a href="contacts.html">Contacts</a></li>
               </ul>

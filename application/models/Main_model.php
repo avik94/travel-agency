@@ -7,6 +7,6 @@ class Main_model extends CI_Model {
 		$data = $this->db->get($table_name)->row();
 		return $data;
 	}
-	
-	
+
+
 }

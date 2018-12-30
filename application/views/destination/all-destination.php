@@ -11,11 +11,9 @@
     <div class="tabs_wrapper tabs1_wrapper">
       <div class="tabs tabs2">
         <div class="tabs_tabs tabs1_tabs">
-
-            <ul>
-              <li class=" flights"><a href="#tabs-1">Destination</a></li>
-            </ul>
-
+          <ul>
+            <li class=" flights"><a href="#tabs-1">Destination</a></li>
+          </ul>
         </div>
         <div class="tabs_content tabs1_content">
           <div id="tabs-1">
@@ -80,20 +78,22 @@
               </form>
             <div class="row customRow">
                 <div class="col-sm-12">
+                  <?php $count=0;$numOfCol=3; ?>
                   <div class="row">
+                    <?php foreach ($destinationDetails as $data):?>
                     <div class="col-sm-4">
                       <div class="thumb5">
                         <div class="thumbnail clearfix">
                           <figure>
-                            <img src="https://demo.gridgum.com/templates/Travel-agency/images/hotels01.jpg" alt="" class="img-responsive">
+                            <img src="<?php echo base_url(); ?>admin/assets/images/destination/<?php echo $data->image; ?>" alt="" class="img-responsive">
                             <div class="over">
-                              <div class="v1">Normandy Hotel <span>6.9 Review score</span></div>
-                              <div class="v2">Twin / Double Room</div>
+                              <div class="v1"><?php echo strtoupper($data->name); ?></div>
+                              <!-- <div class="v2"></div> -->
                             </div>
                           </figure>
                           <div class="caption">
-                            <div class="txt1">Normandy Hotel</div>
-                            <div class="txt2">Twin / Double Room</div>
+                            <div class="txt1 desHeadding"><?php echo strtoupper($data->name); ?></div>
+                            <div class="txt2 desDescription"><?php echo $data->description; ?></div>
                             <div class="txt3 clearfix">
                               <div class="left_side">
                                 <div class="price">$250.00</div>
@@ -105,262 +105,19 @@
                                   <img src="https://demo.gridgum.com/templates/Travel-agency/images/star3.png" alt="">
                                 </div>
                               </div>
-                              <div class="right_side"><a href="https://demo.gridgum.com/templates/Travel-agency/search-hotel.html" class="btn-default btn1">Details</a></div>
+                              <div class="right_side"><a href="https://demo.gridgum.com/templates/Travel-agency/search-hotel.html" class="btn-default btn1">See All</a></div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="col-sm-4">
-                      <div class="thumb5">
-                        <div class="thumbnail clearfix">
-                          <figure>
-                            <img src="https://demo.gridgum.com/templates/Travel-agency/images/hotels02.jpg" alt="" class="img-responsive">
-                            <div class="over">
-                              <div class="v1">Hotel West-End <span>6.9 Review score</span></div>
-                              <div class="v2">Twin / Double Room</div>
-                            </div>
-                          </figure>
-                          <div class="caption">
-                            <div class="txt1">Hotel West-End</div>
-                            <div class="txt2">Twin / Double Room</div>
-                            <div class="txt3 clearfix">
-                              <div class="left_side">
-                                <div class="price">$349.00</div>
-                                <div class="stars2">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star1.png" alt="">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star1.png" alt="">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star1.png" alt="">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star1.png" alt="">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star3.png" alt="">
-                                </div>
-                              </div>
-                              <div class="right_side"><a href="https://demo.gridgum.com/templates/Travel-agency/search-hotel.html" class="btn-default btn1">Details</a></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-sm-4">
-                      <div class="thumb5">
-                        <div class="thumbnail clearfix">
-                          <figure>
-                            <img src="https://demo.gridgum.com/templates/Travel-agency/images/hotels03.jpg" alt="" class="img-responsive">
-                            <div class="over">
-                              <div class="v1">Chambiges Elysees <span>6.9 Review score</span></div>
-                              <div class="v2">Twin / Double Room</div>
-                            </div>
-                          </figure>
-                          <div class="caption">
-                            <div class="txt1">Chambiges Elysees</div>
-                            <div class="txt2">Twin / Double Room</div>
-                            <div class="txt3 clearfix">
-                              <div class="left_side">
-                                <div class="price">$360.00</div>
-                                <div class="stars2">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star1.png" alt="">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star1.png" alt="">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star1.png" alt="">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star1.png" alt="">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star3.png" alt="">
-                                </div>
-                              </div>
-                              <div class="right_side"><a href="https://demo.gridgum.com/templates/Travel-agency/search-hotel.html" class="btn-default btn1">Details</a></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="hl1"></div>
-
-                  <div class="row">
-                    <div class="col-sm-4">
-                      <div class="thumb5">
-                        <div class="thumbnail clearfix">
-                          <figure>
-                            <img src="https://demo.gridgum.com/templates/Travel-agency/images/hotels04.jpg" alt="" class="img-responsive">
-                            <div class="over">
-                              <div class="v1">Hamilton Hotel <span>6.9 Review score</span></div>
-                              <div class="v2">Twin / Double Room</div>
-                            </div>
-                          </figure>
-                          <div class="caption">
-                            <div class="txt1">Hamilton Hotel</div>
-                            <div class="txt2">Twin / Double Room</div>
-                            <div class="txt3 clearfix">
-                              <div class="left_side">
-                                <div class="price">$75.00</div>
-                                <div class="stars2">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star1.png" alt="">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star1.png" alt="">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star1.png" alt="">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star1.png" alt="">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star3.png" alt="">
-                                </div>
-                              </div>
-                              <div class="right_side"><a href="https://demo.gridgum.com/templates/Travel-agency/search-hotel.html" class="btn-default btn1">Details</a></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-sm-4">
-                      <div class="thumb5">
-                        <div class="thumbnail clearfix">
-                          <figure>
-                            <img src="https://demo.gridgum.com/templates/Travel-agency/images/hotels05.jpg" alt="" class="img-responsive">
-                            <div class="over">
-                              <div class="v1">Central Grand Hotel <span>6.9 Review score</span></div>
-                              <div class="v2">Twin / Double Room</div>
-                            </div>
-                          </figure>
-                          <div class="caption">
-                            <div class="txt1">Central Grand Hotel</div>
-                            <div class="txt2">Twin / Double Room</div>
-                            <div class="txt3 clearfix">
-                              <div class="left_side">
-                                <div class="price">$65.00</div>
-                                <div class="stars2">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star1.png" alt="">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star1.png" alt="">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star1.png" alt="">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star1.png" alt="">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star3.png" alt="">
-                                </div>
-                              </div>
-                              <div class="right_side"><a href="https://demo.gridgum.com/templates/Travel-agency/search-hotel.html" class="btn-default btn1">Details</a></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-sm-4">
-                      <div class="thumb5">
-                        <div class="thumbnail clearfix">
-                          <figure>
-                            <img src="https://demo.gridgum.com/templates/Travel-agency/images/hotels06.jpg" alt="" class="img-responsive">
-                            <div class="over">
-                              <div class="v1">Ambasador Premium <span>6.9 Review score</span></div>
-                              <div class="v2">Twin / Double Room</div>
-                            </div>
-                          </figure>
-                          <div class="caption">
-                            <div class="txt1">Ambasador Premium</div>
-                            <div class="txt2">Twin / Double Room</div>
-                            <div class="txt3 clearfix">
-                              <div class="left_side">
-                                <div class="price">$35.00</div>
-                                <div class="stars2">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star1.png" alt="">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star1.png" alt="">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star1.png" alt="">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star1.png" alt="">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star3.png" alt="">
-                                </div>
-                              </div>
-                              <div class="right_side"><a href="https://demo.gridgum.com/templates/Travel-agency/search-hotel.html" class="btn-default btn1">Details</a></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="hl1"></div>
-
-                  <div class="row">
-                    <div class="col-sm-4">
-                      <div class="thumb5">
-                        <div class="thumbnail clearfix">
-                          <figure>
-                            <img src="https://demo.gridgum.com/templates/Travel-agency/images/hotels07.jpg" alt="" class="img-responsive">
-                            <div class="over">
-                              <div class="v1">Grand Plaza <span>6.9 Review score</span></div>
-                              <div class="v2">Twin / Double Room</div>
-                            </div>
-                          </figure>
-                          <div class="caption">
-                            <div class="txt1">Grand Plaza</div>
-                            <div class="txt2">Twin / Double Room</div>
-                            <div class="txt3 clearfix">
-                              <div class="left_side">
-                                <div class="price">$450.00</div>
-                                <div class="stars2">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star1.png" alt="">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star1.png" alt="">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star1.png" alt="">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star1.png" alt="">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star3.png" alt="">
-                                </div>
-                              </div>
-                              <div class="right_side"><a href="https://demo.gridgum.com/templates/Travel-agency/search-hotel.html" class="btn-default btn1">Details</a></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-sm-4">
-                      <div class="thumb5">
-                        <div class="thumbnail clearfix">
-                          <figure>
-                            <img src="https://demo.gridgum.com/templates/Travel-agency/images/hotels08.jpg" alt="" class="img-responsive">
-                            <div class="over">
-                              <div class="v1">Grand Iberia <span>6.9 Review score</span></div>
-                              <div class="v2">Twin / Double Room</div>
-                            </div>
-                          </figure>
-                          <div class="caption">
-                            <div class="txt1">Grand Iberia</div>
-                            <div class="txt2">Twin / Double Room</div>
-                            <div class="txt3 clearfix">
-                              <div class="left_side">
-                                <div class="price">$255.00</div>
-                                <div class="stars2">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star1.png" alt="">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star1.png" alt="">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star1.png" alt="">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star1.png" alt="">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star3.png" alt="">
-                                </div>
-                              </div>
-                              <div class="right_side"><a href="https://demo.gridgum.com/templates/Travel-agency/search-hotel.html" class="btn-default btn1">Details</a></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-sm-4">
-                      <div class="thumb5">
-                        <div class="thumbnail clearfix">
-                          <figure>
-                            <img src="https://demo.gridgum.com/templates/Travel-agency/images/hotels09.jpg" alt="" class="img-responsive">
-                            <div class="over">
-                              <div class="v1">Westminster Hotel <span>6.9 Review score</span></div>
-                              <div class="v2">Twin / Double Room</div>
-                            </div>
-                          </figure>
-                          <div class="caption">
-                            <div class="txt1">Westminster Hotel</div>
-                            <div class="txt2">Twin / Double Room</div>
-                            <div class="txt3 clearfix">
-                              <div class="left_side">
-                                <div class="price">$275.00</div>
-                                <div class="stars2">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star1.png" alt="">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star1.png" alt="">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star1.png" alt="">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star1.png" alt="">
-                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star3.png" alt="">
-                                </div>
-                              </div>
-                              <div class="right_side"><a href="https://demo.gridgum.com/templates/Travel-agency/search-hotel.html" class="btn-default btn1">Details</a></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                      <?php
+                      $count++;
+                      if($count%$numOfCol == 0){
+                        echo '</div><div class="hl1"></div><div class="row">';
+                      }
+                      endforeach;
+                      ?>
                   </div>
 
                   <div class="pager_wrapper">

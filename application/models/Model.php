@@ -12,6 +12,15 @@ class Model extends CI_Model {
 		$data = $qry->result();
 		return $data;
 	}
+	public function joinLocationDestination(){
+		$this->db->select('*');
+		$this->db->from('destinations');
+		$this->db->join('locations', 'locations.destination_id = destinations.id');
+		$qry = $this->db->get();
+		$data = $qry->result();
+		return $data;
+	}
+
 
 
 }

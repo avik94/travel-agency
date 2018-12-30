@@ -28,10 +28,12 @@ class Main extends CI_Controller {
 
 	// all location for single destination
 	public function allLocation(){
+
 		$data['active']='allLocation';  //header data(we are not using it but it is need to avoid error)
 		$data['siteData'] = $this->Model->getOneRow('sitedata'); //site global details
 
-		// $data['allLocationDetails'] = $this->Model->getTableData('destinations');
+		$data['allLocationDetails'] = $this->Model->joinLocationDestination();
+
 		$this->load->template('common/header','destination/all-location','common/footer', $data);
 	}
 }

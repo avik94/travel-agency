@@ -105,7 +105,7 @@
                                   <img src="https://demo.gridgum.com/templates/Travel-agency/images/star3.png" alt="">
                                 </div>
                               </div>
-                              <div class="right_side"><a href="https://demo.gridgum.com/templates/Travel-agency/search-hotel.html" class="btn-default btn1">See All</a></div>
+                              <div class="right_side"><a href="<?php echo base_url(); ?>all-location/?id=<?php echo $data->id;?>" class="btn-default btn1">See All</a></div>
                             </div>
                           </div>
                         </div>

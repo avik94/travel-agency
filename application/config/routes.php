@@ -54,3 +54,5 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['about'] ="Main/about";
 $route['destinations'] ="Main/destination";
+$route['all-location'] ="Main/allLocation";
+$route['all-location/(:any)'] ="Main/allLocation/$1";

@@ -414,8 +414,8 @@
           <div class="thumbnail clearfix">
             <a href="#">
               <figure class="">
-                <img src="images/why1.png" alt="" class="img1 img-responsive">
-                <img src="images/why1_hover.png" alt="" class="img2 img-responsive">
+                <img src="<?php echo base_url(); ?>admin/assets/images/why1.png" alt="" class="img1 img-responsive">
+                <img src="<?php echo base_url(); ?>admin/assets/images/why1_hover.png" alt="" class="img2 img-responsive">
               </figure>
               <div class="caption">
                 <div class="txt1">Amazing Travel</div>
@@ -431,8 +431,8 @@
           <div class="thumbnail clearfix">
             <a href="#">
               <figure class="">
-                <img src="images/why2.png" alt="" class="img1 img-responsive">
-                <img src="images/why2_hover.png" alt="" class="img2 img-responsive">
+                <img src="<?php echo base_url(); ?>admin/assets/images/why2.png" alt="" class="img1 img-responsive">
+                <img src="<?php echo base_url(); ?>admin/assets/images/why2_hover.png" alt="" class="img2 img-responsive">
               </figure>
               <div class="caption">
                 <div class="txt1">Discover</div>
@@ -448,8 +448,8 @@
           <div class="thumbnail clearfix">
             <a href="#">
               <figure class="">
-                <img src="images/why3.png" alt="" class="img1 img-responsive">
-                <img src="images/why3_hover.png" alt="" class="img2 img-responsive">
+                <img src="<?php echo base_url(); ?>admin/assets/images/why3.png" alt="" class="img1 img-responsive">
+                <img src="<?php echo base_url(); ?>admin/assets/images/why3_hover.png" alt="" class="img2 img-responsive">
               </figure>
               <div class="caption">
                 <div class="txt1">Book Your Trip</div>
@@ -465,8 +465,8 @@
           <div class="thumbnail clearfix">
             <a href="#">
               <figure class="">
-                <img src="images/why4.png" alt="" class="img1 img-responsive">
-                <img src="images/why4_hover.png" alt="" class="img2 img-responsive">
+                <img src="<?php echo base_url(); ?>admin/assets/images/why4.png" alt="" class="img1 img-responsive">
+                <img src="<?php echo base_url(); ?>admin/assets/images/why4_hover.png" alt="" class="img2 img-responsive">
               </figure>
               <div class="caption">
                 <div class="txt1">Nice Support</div>
@@ -524,7 +524,7 @@
                         <div class="popular">
                           <div class="popular_inner">
                             <figure>
-                              <img src="images/popular01.jpg" alt="" class="img-responsive">
+                              <img src="<?php echo base_url(); ?>admin/assets/images/popular01.jpg" alt="" class="img-responsive">
                               <div class="over">
                                 <div class="v1">Bahamas <span>17 Deal Offers</span></div>
                                 <div class="v2">Lorem ipsum dolor sit amet, concateus.</div>
@@ -536,11 +536,11 @@
                               <div class="txt3 clearfix">
                                 <div class="left_side">
                                   <div class="stars1">
-                                    <img src="images/star1.png" alt="">
-                                    <img src="images/star1.png" alt="">
-                                    <img src="images/star1.png" alt="">
-                                    <img src="images/star1.png" alt="">
-                                    <img src="images/star2.png" alt="">
+                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
+                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
+                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
+                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
+                                    <img src="<?php echo base_url(); ?>admin/assets/images/star2.png" alt="">
                                   </div>
                                   <div class="nums">- 18 Reviews</div>
                                 </div>
@@ -554,7 +554,7 @@
                         <div class="popular">
                           <div class="popular_inner">
                             <figure>
-                              <img src="images/popular02.jpg" alt="" class="img-responsive">
+                              <img src="<?php echo base_url(); ?>admin/assets/images/popular02.jpg" alt="" class="img-responsive">
                               <div class="over">
                                 <div class="v1">Mediterranean <span>17 Deal Offers</span></div>
                                 <div class="v2">Lorem ipsum dolor sit amet, concateus.</div>
@@ -566,11 +566,11 @@
                               <div class="txt3 clearfix">
                                 <div class="left_side">
                                   <div class="stars1">
-                                    <img src="images/star1.png" alt="">
-                                    <img src="images/star1.png" alt="">
-                                    <img src="images/star1.png" alt="">
-                                    <img src="images/star1.png" alt="">
-                                    <img src="images/star1.png" alt="">
+                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
+                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
+                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
+                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
+                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
                                   </div>
                                   <div class="nums">- 168 Reviews</div>
                                 </div>
@@ -584,7 +584,7 @@
                         <div class="popular">
                           <div class="popular_inner">
                             <figure>
-                              <img src="images/popular03.jpg" alt="" class="img-responsive">
+                              <img src="<?php echo base_url(); ?>admin/assets/images/popular03.jpg" alt="" class="img-responsive">
                               <div class="over">
                                 <div class="v1">Greece <span>17 Deal Offers</span></div>
                                 <div class="v2">Lorem ipsum dolor sit amet, concateus.</div>
@@ -596,11 +596,11 @@
                               <div class="txt3 clearfix">
                                 <div class="left_side">
                                   <div class="stars1">
-                                    <img src="images/star1.png" alt="">
-                                    <img src="images/star1.png" alt="">
-                                    <img src="images/star1.png" alt="">
-                                    <img src="images/star1.png" alt="">
-                                    <img src="images/star2.png" alt="">
+                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
+                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
+                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
+                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
+                                    <img src="<?php echo base_url(); ?>admin/assets/images/star2.png" alt="">
                                   </div>
                                   <div class="nums">- 16 Reviews</div>
                                 </div>
@@ -614,7 +614,7 @@
                         <div class="popular">
                           <div class="popular_inner">
                             <figure>
-                              <img src="images/popular01.jpg" alt="" class="img-responsive">
+                              <img src="<?php echo base_url(); ?>admin/assets/images/popular01.jpg" alt="" class="img-responsive">
                               <div class="over">
                                 <div class="v1">Bahamas <span>17 Deal Offers</span></div>
                                 <div class="v2">Lorem ipsum dolor sit amet, concateus.</div>
@@ -626,11 +626,11 @@
                               <div class="txt3 clearfix">
                                 <div class="left_side">
                                   <div class="stars1">
-                                    <img src="images/star1.png" alt="">
-                                    <img src="images/star1.png" alt="">
-                                    <img src="images/star1.png" alt="">
-                                    <img src="images/star1.png" alt="">
-                                    <img src="images/star2.png" alt="">
+                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
+                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
+                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
+                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
+                                    <img src="<?php echo base_url(); ?>admin/assets/images/star2.png" alt="">
                                   </div>
                                   <div class="nums">- 18 Reviews</div>
                                 </div>
@@ -644,7 +644,7 @@
                         <div class="popular">
                           <div class="popular_inner">
                             <figure>
-                              <img src="images/popular02.jpg" alt="" class="img-responsive">
+                              <img src="<?php echo base_url(); ?>admin/assets/images/popular02.jpg" alt="" class="img-responsive">
                               <div class="over">
                                 <div class="v1">Mediterranean <span>17 Deal Offers</span></div>
                                 <div class="v2">Lorem ipsum dolor sit amet, concateus.</div>
@@ -656,11 +656,11 @@
                               <div class="txt3 clearfix">
                                 <div class="left_side">
                                   <div class="stars1">
-                                    <img src="images/star1.png" alt="">
-                                    <img src="images/star1.png" alt="">
-                                    <img src="images/star1.png" alt="">
-                                    <img src="images/star1.png" alt="">
-                                    <img src="images/star1.png" alt="">
+                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
+                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
+                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
+                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
+                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
                                   </div>
                                   <div class="nums">- 168 Reviews</div>
                                 </div>
@@ -674,7 +674,7 @@
                         <div class="popular">
                           <div class="popular_inner">
                             <figure>
-                              <img src="images/popular03.jpg" alt="" class="img-responsive">
+                              <img src="<?php echo base_url(); ?>admin/assets/images/popular03.jpg" alt="" class="img-responsive">
                               <div class="over">
                                 <div class="v1">Greece <span>17 Deal Offers</span></div>
                                 <div class="v2">Lorem ipsum dolor sit amet, concateus.</div>
@@ -686,11 +686,11 @@
                               <div class="txt3 clearfix">
                                 <div class="left_side">
                                   <div class="stars1">
-                                    <img src="images/star1.png" alt="">
-                                    <img src="images/star1.png" alt="">
-                                    <img src="images/star1.png" alt="">
-                                    <img src="images/star1.png" alt="">
-                                    <img src="images/star2.png" alt="">
+                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
+                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
+                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
+                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
+                                    <img src="<?php echo base_url(); ?>admin/assets/images/star2.png" alt="">
                                   </div>
                                   <div class="nums">- 16 Reviews</div>
                                 </div>
@@ -700,15 +700,6 @@
                           </div>
                         </div>
                       </li>
-
-
-
-
-
-
-
-
-
                     </ul>
                   </div>
                 </div>
@@ -770,7 +761,7 @@ sod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad min
         </div>
       </div>
       <div class="col-sm-12 col-md-6 col-md-pull-6 animated" data-animation="fadeInLeft" data-animation-delay="200">
-        <img src="images/people.png" alt="" class="img1 img-responsive">
+        <img src="<?php echo base_url(); ?>admin/assets/images/people.png" alt="" class="img1 img-responsive">
       </div>
     </div>
   </div>
@@ -784,8 +775,8 @@ sod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad min
           <div class="thumbnail clearfix">
             <a href="#">
               <figure>
-                <img src="images/partner1.jpg" alt="" class="img1 img-responsive">
-                <img src="images/partner1_hover.jpg" alt="" class="img2 img-responsive">
+                <img src="<?php echo base_url(); ?>admin/assets/images/partner1.jpg" alt="" class="img1 img-responsive">
+                <img src="<?php echo base_url(); ?>admin/assets/images/partner1_hover.jpg" alt="" class="img2 img-responsive">
               </figure>
             </a>
           </div>
@@ -796,8 +787,8 @@ sod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad min
           <div class="thumbnail clearfix">
             <a href="#">
               <figure>
-                <img src="images/partner2.jpg" alt="" class="img1 img-responsive">
-                <img src="images/partner2_hover.jpg" alt="" class="img2 img-responsive">
+                <img src="<?php echo base_url(); ?>admin/assets/images/partner2.jpg" alt="" class="img1 img-responsive">
+                <img src="<?php echo base_url(); ?>admin/assets/images/partner2_hover.jpg" alt="" class="img2 img-responsive">
               </figure>
             </a>
           </div>
@@ -808,8 +799,8 @@ sod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad min
           <div class="thumbnail clearfix">
             <a href="#">
               <figure>
-                <img src="images/partner3.jpg" alt="" class="img1 img-responsive">
-                <img src="images/partner3_hover.jpg" alt="" class="img2 img-responsive">
+                <img src="<?php echo base_url(); ?>admin/assets/images/partner3.jpg" alt="" class="img1 img-responsive">
+                <img src="<?php echo base_url(); ?>admin/assets/images/partner3_hover.jpg" alt="" class="img2 img-responsive">
               </figure>
             </a>
           </div>
@@ -820,8 +811,8 @@ sod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad min
           <div class="thumbnail clearfix">
             <a href="#">
               <figure>
-                <img src="images/partner4.jpg" alt="" class="img1 img-responsive">
-                <img src="images/partner4_hover.jpg" alt="" class="img2 img-responsive">
+                <img src="<?php echo base_url(); ?>admin/assets/images/partner4.jpg" alt="" class="img1 img-responsive">
+                <img src="<?php echo base_url(); ?>admin/assets/images/partner4_hover.jpg" alt="" class="img2 img-responsive">
               </figure>
             </a>
           </div>
@@ -832,8 +823,8 @@ sod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad min
           <div class="thumbnail clearfix">
             <a href="#">
               <figure>
-                <img src="images/partner5.jpg" alt="" class="img1 img-responsive">
-                <img src="images/partner5_hover.jpg" alt="" class="img2 img-responsive">
+                <img src="<?php echo base_url(); ?>admin/assets/images/partner5.jpg" alt="" class="img1 img-responsive">
+                <img src="<?php echo base_url(); ?>admin/assets/images/partner5_hover.jpg" alt="" class="img2 img-responsive">
               </figure>
             </a>
           </div>
@@ -844,8 +835,8 @@ sod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad min
           <div class="thumbnail clearfix">
             <a href="#">
               <figure>
-                <img src="images/partner6.jpg" alt="" class="img1 img-responsive">
-                <img src="images/partner6_hover.jpg" alt="" class="img2 img-responsive">
+                <img src="<?php echo base_url(); ?>admin/assets/images/partner6.jpg" alt="" class="img1 img-responsive">
+                <img src="<?php echo base_url(); ?>admin/assets/images/partner6_hover.jpg" alt="" class="img2 img-responsive">
               </figure>
             </a>
           </div>

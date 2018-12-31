@@ -28,12 +28,12 @@ class Main extends CI_Controller {
 
 	// all location for single destination
 	public function allLocation(){
-		$something = $this->input->get('id');
-		$a["destination_id"] = $something;
+		$something = $this->input->get('id'); // get the id that is coming from the anchor of destination
+		$target["destination_id"] = $something;
 
 		$data['active']='allLocation';  //header data(we are not using it but it is need to avoid error)
 		$data['siteData'] = $this->Model->getOneRow('sitedata'); //site global details
-		$data["match"] = $this->db->get_where("locations",$a)->result();
+		$data["match"] = $this->db->get_where("locations",$target)->result();
 		echo "<pre>";
 		print_r($data);
 

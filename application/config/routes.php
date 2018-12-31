@@ -56,3 +56,5 @@ $route['about'] ="Main/about";
 $route['destinations'] ="Main/destination";
 $route['all-location'] ="Main/allLocation";
 $route['all-location/(:any)'] ="Main/allLocation/$1";
+$route['single-location'] ="Main/sigleLocationDetail";
+$route['single-location/(:any)'] ="Main/sigleLocationDetail";

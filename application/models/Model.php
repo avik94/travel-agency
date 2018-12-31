@@ -12,6 +12,10 @@ class Model extends CI_Model {
 		$data = $qry->result();
 		return $data;
 	}
+	public function getSpecificData($tableName,$target){
+		$data = $this->db->get_where($tableName,$target)->result();
+		return $data;
+	}
 	// public function joinLocationDestination(){
 	// 	$this->db->select('*');
 	// 	$this->db->from('destinations');

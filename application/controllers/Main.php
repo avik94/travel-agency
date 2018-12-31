@@ -28,15 +28,24 @@ class Main extends CI_Controller {
 
 	// all location for single destination
 	public function allLocation(){
-		$something = $this->input->get('id'); // get the id that is coming from the anchor of destination
-		$target["destination_id"] = $something;
+		$getId = $this->input->get('id'); // get the id that is coming from the anchor of destination
+		$target["destination_id"] = $getId;
 
 		$data['active']='allLocation';  //header data(we are not using it but it is need to avoid error)
 		$data['siteData'] = $this->Model->getOneRow('sitedata'); //site global details
-		$data["match"] = $this->db->get_where("locations",$target)->result();
-		echo "<pre>";
-		print_r($data);
+		$data["destinationLocation"] = $this->Model->getSpecificData("locations",$target); //geting data with id
 
 		$this->load->template('common/header','destination/all-location','common/footer', $data);
+	}
+
+	public function sigleLocationDetail(){
+		$getId = $this->input->get('id');
+		$target["id"] = $getId;
+		$data['active']='sigleLocationDetail';  //header data(we are not using it but it is need to avoid error)
+		$data['siteData'] = $this->Model->getOneRow('sitedata'); //site global details
+		$data['allLocationData'] = $this->Model->getSpecificData("locations",$target); //geting data with id
+		echo "<pre>";
+		print_r($data);
+		$this->load->template('common/header','destination/single-location','common/footer', $data);
 	}
 }

@@ -85,7 +85,7 @@
                       <div class="thumb5">
                         <div class="thumbnail clearfix">
                           <figure>
-                            <img src="<?php echo base_url(); ?>admin/assets/images/destination/<?php echo $data->image; ?>" alt="" class="img-responsive">
+                            <img src="<?php echo base_url(); ?>admin/assets/images/destinations/<?php echo $data->image; ?>" alt="" class="img-responsive">
                             <div class="over">
                               <div class="v1"><?php echo strtoupper($data->name); ?></div>
                               <!-- <div class="v2"></div> -->

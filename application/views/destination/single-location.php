@@ -11,8 +11,6 @@
           <?php foreach ($allLocationData as $data):?>
             <div class="col-sm-12">
                 <div class="blog_content">
-
-
                     <div class="post post-full">
                         <h3 class="hch"><?= $data->name;?></h3>
                         <span class="star-rating">
@@ -34,41 +32,19 @@
                                         <div class="inner">
                                             <div class="carousel main">
                                                 <ul>
+                                                  <?php $str = $data->slider_images;
+                                                    $separateSlider = explode(",",$str);
+                                                    // print_r($separateSlider);
+                                                  ?>
+                                                  <?php foreach ($separateSlider as $value):?>
                                                     <li>
                                                         <div class="sl1">
                                                             <div class="sl1_inner">
-                                                                <img src="https://demo.gridgum.com/templates/Travel-agency/images/ht01.jpg" alt="" class="img-responsive">
+                                                                <img src="<?php echo base_url();?>admin/assets/images/single-location-slider/<?php echo $value; ?>" alt="" class="img-responsive">
                                                             </div>
                                                         </div>
                                                     </li>
-                                                    <li>
-                                                        <div class="sl1">
-                                                            <div class="sl1_inner">
-                                                                <img src="https://demo.gridgum.com/templates/Travel-agency/images/ht02.jpg" alt="" class="img-responsive">
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="sl1">
-                                                            <div class="sl1_inner">
-                                                                <img src="https://demo.gridgum.com/templates/Travel-agency/images/ht03.jpg" alt="" class="img-responsive">
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="sl1">
-                                                            <div class="sl1_inner">
-                                                                <img src="https://demo.gridgum.com/templates/Travel-agency/images/ht04.jpg" alt="" class="img-responsive">
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="sl1">
-                                                            <div class="sl1_inner">
-                                                                <img src="https://demo.gridgum.com/templates/Travel-agency/images/ht05.jpg" alt="" class="img-responsive">
-                                                            </div>
-                                                        </div>
-                                                    </li>
+                                                  <?php endforeach; ?>
                                                 </ul>
                                             </div>
                                         </div>

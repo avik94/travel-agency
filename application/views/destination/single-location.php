@@ -84,6 +84,11 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <h4>Available Hotel</h4>
+                      </div>
+                    </div>
                 </div>
             </div>
           <?php endforeach; ?>

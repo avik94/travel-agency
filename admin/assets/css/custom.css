@@ -11,3 +11,8 @@
   border-bottom: 1px solid #41a99c;
   padding-bottom: 5px;
 }
+.pager li strong{
+  padding: 12px!important;
+  border: 1px solid;
+  color: #41a99c;
+}

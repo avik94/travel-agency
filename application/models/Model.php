@@ -7,10 +7,24 @@ class Model extends CI_Model {
 		$data = $this->db->get($tableName)->row();
 		return $data;
 	}
+	// getting table data
 	public function getTableData($tableName){
 		$qry = $this->db->get($tableName);
 		$data = $qry->result();
 		return $data;
+	}
+	// getting table data with limit
+	public function getTableDataWithLimit($tableName,$limit,$offset){
+		$qry = $this->db->get($tableName,$limit,$offset);
+		$data = $qry->result();
+		return $data;
+	}
+	//count row for table
+	public function countRow($tableName){
+		$qry = $this->db->get($tableName);
+		$data = $qry->result();
+		$count =count($data);
+		return $count;
 	}
 	public function getSpecificData($tableName,$target){
 		$data = $this->db->get_where($tableName,$target)->result();

@@ -7,22 +7,33 @@ class Main extends CI_Controller {
         parent::__construct();
         $this->load->model('Model');
   }
-
+	// home page
 	public function index(){
 		$data['active']='home';
 		$data['siteData'] = $this->Model->getOneRow('sitedata');
 		$this->load->template('common/header','index','common/footer', $data);
 	}
+	// about page
 	public function about(){
 		$data['active']='about';
 		$data['siteData'] = $this->Model->getOneRow('sitedata');
 		$this->load->template('common/header','about','common/footer', $data);
 	}
+	// destination page
 	public function destination(){
 		$data['active']='destination';  //header data
 		$data['siteData'] = $this->Model->getOneRow('sitedata'); //site global details
 
-		$data['destinationDetails'] = $this->Model->getTableData('destinations');
+		// pagination
+		$this->load->library('pagination');
+		$config['base_url'] = 'http://localhost/travel-agency/destinations';
+		$config['per_page'] = 6; $tableName="destinations";
+		$config['total_rows'] = $this->Model->countRow($tableName);
+		// $config['use_page_numbers'] = TRUE;
+		$this->pagination->initialize($config);
+		// end pagination
+
+		$data['destinationDetails'] = $this->Model->getTableDataWithLimit('destinations',$config['per_page'],$this->uri->segment(2));
 		$this->load->template('common/header','destination/all-destination','common/footer', $data);
 	}
 
@@ -37,15 +48,13 @@ class Main extends CI_Controller {
 
 		$this->load->template('common/header','destination/all-location','common/footer', $data);
 	}
-
-	public function sigleLocationDetail(){
+	// single location
+	public function singleLocationDetail(){
 		$getId = $this->input->get('id');
 		$target["id"] = $getId;
 		$data['active']='sigleLocationDetail';  //header data(we are not using it but it is need to avoid error)
 		$data['siteData'] = $this->Model->getOneRow('sitedata'); //site global details
 		$data['allLocationData'] = $this->Model->getSpecificData("locations",$target); //geting data with id
-		echo "<pre>";
-		print_r($data);
 		$this->load->template('common/header','destination/single-location','common/footer', $data);
 	}
 }

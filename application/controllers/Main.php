@@ -52,10 +52,11 @@ class Main extends CI_Controller {
 	public function singleLocationDetail(){
 		$getId = $this->input->get('id');
 		$target["id"] = $getId;
+		$targetLocation["location_id"] = $getId;
 		$data['active']='sigleLocationDetail';  //header data(we are not using it but it is need to avoid error)
 		$data['siteData'] = $this->Model->getOneRow('sitedata'); //site global details
-		$data['allLocationData'] = $this->Model->getSpecificData("locations",$target); //geting data with id
-		
+		$data['allLocationData'] = $this->Model->getSpecificData("locations",$target); //geting location data with id
+		$data['allHotelsData'] = $this->Model->getSpecificData("hotels",$targetLocation); //geting hotels data with id
 		$this->load->template('common/header','destination/single-location','common/footer', $data);
 	}
 }

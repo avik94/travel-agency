@@ -16,3 +16,13 @@
   border: 1px solid;
   color: #41a99c;
 }
+.hotel-headding{
+  margin-bottom: 20px;
+  border-bottom: 1px solid;
+}
+.hotelOver{
+  background: rgba(214, 34, 5, 0.8)!important;
+}
+.thumb5 .thumbnail:hover {
+    border-bottom-color: #f93213!important;
+}

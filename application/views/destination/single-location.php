@@ -86,8 +86,42 @@
                     </div>
                     <div class="row">
                       <div class="col-sm-12">
-                        <h4>Available Hotel</h4>
+                        <h4 class="hotel-headding">Available Hotel</h4>
                       </div>
+                    </div>
+                    <div class="row">
+                      <!-- custom col -->
+                      <div class="col-sm-4">
+                        <div class="thumb5">
+                        <div class="thumbnail clearfix">
+                          <figure>
+                            <img src="http://localhost/travel-agency/admin/assets/images/locations/barcelona.jpg" alt="" class="img-responsive">
+                            <div class="over hotelOver">
+                              <div class="v1">BERCELONA</div>
+                              <!-- <div class="v2"></div> -->
+                            </div>
+                          </figure>
+                          <div class="caption">
+                            <div class="txt1 desHeadding">BERCELONA</div>
+                            <div class="txt2 desDescription">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer</div>
+                            <div class="txt3 clearfix">
+                              <div class="left_side">
+                                <div class="price">$250.00</div>
+                                <div class="stars2">
+                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star1.png" alt="">
+                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star1.png" alt="">
+                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star1.png" alt="">
+                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star1.png" alt="">
+                                  <img src="https://demo.gridgum.com/templates/Travel-agency/images/star3.png" alt="">
+                                </div>
+                              </div>
+                              <div class="right_side"><a href="http://localhost/travel-agency/single-location/?id=12" class="btn-default btn1">View Package</a></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                      <!-- end -->
                     </div>
                 </div>
             </div>

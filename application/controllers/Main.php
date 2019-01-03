@@ -57,6 +57,7 @@ class Main extends CI_Controller {
 		$data['siteData'] = $this->Model->getOneRow('sitedata'); //site global details
 		$data['allLocationData'] = $this->Model->getSpecificData("locations",$target); //geting location data with id
 		$data['allHotelsData'] = $this->Model->getSpecificData("hotels",$targetLocation); //geting hotels data with id
+		$data["countHotel"] = count($this->Model->getSpecificData("hotels",$targetLocation));//counting hotel is available or not
 		$this->load->template('common/header','destination/single-location','common/footer', $data);
 	}
 }

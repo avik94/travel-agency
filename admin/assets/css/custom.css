@@ -23,6 +23,6 @@
 .hotelOver{
   background: rgba(214, 34, 5, 0.8)!important;
 }
-.thumb5 .thumbnail:hover {
+.hotelThumb .thumbnail:hover {
     border-bottom-color: #f93213!important;
 }

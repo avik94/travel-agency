@@ -17,59 +17,34 @@
         </div>
         <div class="tabs_content tabs1_content">
           <div id="tabs-1">
-            <form action="javascript:;" class="form1">
+            <form action="Main/searchForm" method="post" class="form1">
                 <div class="row">
-                  <div class="col-sm-4 col-md-4">
+                  <div class="col-sm-5">
                     <div class="select1_wrapper">
-                      <label>City or Hotel Name:</label>
+                      <label>Enter Destination Name</label>
                       <div class="select1_inner">
-                        <select class="select2 select" style="width: 100%">
-                          <option value="1">Enter a destination or hotel name</option>
-                          <option value="2">Lorem ipsum dolor sit amet</option>
-                          <option value="3">Duis autem vel eum</option>
-                          <option value="4">Ut wisi enim ad minim veniam</option>
-                          <option value="5">Nam liber tempor cum</option>
-                          <option value="6">At vero eos et accusam et</option>
-                          <option value="7">Consetetur sadipscing elitr</option>
-                          <option value="8">Sed diam nonumy</option>
+                        <select class="select2 select" name="des" style="width: 100%">
+                          <?php foreach ($allDestinations as $data):?>
+                          <option value="<?php echo $data->id; ?>"><?php echo $data->name; ?></option>
+                        <?php endforeach; ?>
                         </select>
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-4 col-md-2">
-                    <div class="input1_wrapper">
-                      <label>Check-In:</label>
-                      <div class="input1_inner">
-                        <input type="text" class="input datepicker" value="Mm/Dd/Yy">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-4 col-md-2">
-                    <div class="input1_wrapper">
-                      <label>Check-Out:</label>
-                      <div class="input1_inner">
-                        <input type="text" class="input datepicker" value="Mm/Dd/Yy">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-4 col-md-2">
+                  <div class="col-sm-5">
                     <div class="select1_wrapper">
-                      <label>Adult:</label>
+                      <label>Enter Location Name:</label>
                       <div class="select1_inner">
-                        <select class="select2 select" style="width: 100%">
-                          <option value="1">Room  for  1  adult</option>
-                          <option value="2">Room  for  2  adult</option>
-                          <option value="3">Room  for  3  adult</option>
-                          <option value="4">Room  for  4  adult</option>
-                          <option value="5">Room  for  5  adult</option>
-                          <option value="6">Room  for  6  adult</option>
-                          <option value="7">Room  for  7  adult</option>
-                          <option value="8">Room  for  8  adult</option>
+                        <!-- <input type="text" name="loc"> -->
+                        <select class="select2 select" name="loc" style="width: 100%">
+                          <?php foreach ($allLocations as $data):?>
+                          <option value="<?php echo $data->id; ?>"><?php echo $data->name; ?></option>
+                        <?php endforeach; ?>
                         </select>
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-4 col-md-2">
+                  <div class="col-sm-2">
                     <div class="button1_wrapper">
                       <button type="submit" class="btn-default btn-form1-submit">Search</button>
                     </div>

@@ -32,6 +32,10 @@ class Main extends CI_Controller {
 		// $config['use_page_numbers'] = TRUE;
 		$this->pagination->initialize($config);
 		// end pagination
+		// getting destination data for search
+		$data["allDestinations"] = $this->Model->getTableData($tableName);
+		// getting location data for search
+		$data["allLocations"] = $this->Model->getTableData("locations");
 
 		$data['destinationDetails'] = $this->Model->getTableDataWithLimit('destinations',$config['per_page'],$this->uri->segment(2));
 		$this->load->template('common/header','destination/all-destination','common/footer', $data);
@@ -59,5 +63,20 @@ class Main extends CI_Controller {
 		$data['allHotelsData'] = $this->Model->getSpecificData("hotels",$targetLocation); //geting hotels data with id
 		$data["countHotel"] = count($this->Model->getSpecificData("hotels",$targetLocation));//counting hotel is available or not
 		$this->load->template('common/header','destination/single-location','common/footer', $data);
+	}
+	// search destinationpage function
+	public function searchForm(){
+		$data['active']='search';
+		$data['siteData'] = $this->Model->getOneRow('sitedata');
+		$destinationId = $this->input->post("des");
+		$locationId = $this->input->post("loc");
+		// targeting id and destination_id of locations table
+		$target["id"] = $locationId;
+		$target["destination_id"] = $destinationId;
+		$data["searchResult"] = $this->Model->getSpecificData("locations",$target);
+		echo "<pre>";
+		print_r($data);die();
+
+		$this->load->template('common/header','destination/search-result','common/footer', $data);
 	}
 }

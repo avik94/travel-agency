@@ -26,3 +26,15 @@
 .hotelThumb .thumbnail:hover {
     border-bottom-color: #f93213!important;
 }
+.borderRight{
+  border-right: 1px solid #41a99c;
+  height: 365px;
+}
+.paddindOut{
+  padding-right: 34px;
+}
+.starNote{
+  font-size: 25px;
+  font-weight: bold;
+  color:#f30d02;
+}

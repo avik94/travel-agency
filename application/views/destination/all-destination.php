@@ -17,17 +17,17 @@
         </div>
         <div class="tabs_content tabs1_content">
           <div id="tabs-1">
-            <form action="Main/searchForm" method="post" class="form1">
+            <form action="search-result" method="post" class="form1">
                 <div class="row">
                   <div class="col-sm-5">
                     <div class="select1_wrapper">
                       <label>Enter Destination Name</label>
                       <div class="select1_inner">
-                        <select class="select2 select" name="des" style="width: 100%">
-                          <?php foreach ($allDestinations as $data):?>
-                          <option value="<?php echo $data->id; ?>"><?php echo $data->name; ?></option>
-                        <?php endforeach; ?>
-                        </select>
+                          <select class="select2 select" name="des" style="width: 100%" >
+                            <?php foreach ($allDestinations as $data):?>
+                              <option value="<?php echo $data->id; ?>"><?php echo $data->name; ?></option>
+                            <?php endforeach; ?>
+                          </select>
                       </div>
                     </div>
                   </div>
@@ -35,11 +35,10 @@
                     <div class="select1_wrapper">
                       <label>Enter Location Name:</label>
                       <div class="select1_inner">
-                        <!-- <input type="text" name="loc"> -->
                         <select class="select2 select" name="loc" style="width: 100%">
                           <?php foreach ($allLocations as $data):?>
-                          <option value="<?php echo $data->id; ?>"><?php echo $data->name; ?></option>
-                        <?php endforeach; ?>
+                          <option  value="<?php echo $data->id; ?>"><?php echo $data->name; ?></option>
+                          <?php endforeach; ?>
                         </select>
                       </div>
                     </div>

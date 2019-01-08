@@ -74,8 +74,9 @@ class Main extends CI_Controller {
 		$target["id"] = $locationId;
 		$target["destination_id"] = $destinationId;
 		$data["searchResult"] = $this->Model->getSpecificData("locations",$target);
-		echo "<pre>";
-		print_r($data);die();
+		$data["CountSearchResult"] = count($this->Model->getSpecificData("locations",$target));
+		// echo "<pre>";
+		// print_r($data);die();
 
 		$this->load->template('common/header','destination/search-result','common/footer', $data);
 	}

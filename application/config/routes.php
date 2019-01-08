@@ -59,3 +59,4 @@ $route['all-location'] ="Main/allLocation";
 $route['all-location/(:any)'] ="Main/allLocation/$1";
 $route['single-location'] ="Main/singleLocationDetail";
 $route['single-location/(:any)'] ="Main/sigleLocationDetail";
+$route['search-result'] ="Main/searchForm";

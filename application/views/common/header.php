@@ -34,7 +34,7 @@
   <script src="<?= base_url('admin/assets/'); ?>js/jquery.caroufredsel.js"></script>
   <script src="<?= base_url('admin/assets/'); ?>js/jquery.touchSwipe.min.js"></script>
   <script src="<?= base_url('admin/assets/'); ?>js/jquery.ui.totop.js"></script>
-  <script src="<?= base_url('admin/assets/'); ?>js/script.js"></script>
+  <script src="<?= base_url('admin/assets/'); ?>js/script.js"></script>  
 
 </head>
 <body class="front">

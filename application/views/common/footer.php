@@ -10,18 +10,6 @@
         <p>
           Nam liber tempor cum soluta nobis option congue nihil imperdiet doming id quod mazim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.
         </p>
-        <p>
-          <a href="#" class="btn-default btn2">Read More</a>
-        </p>
-      </div>
-      <div class="col-sm-3">
-        <div class="bot1_title">Travel Specialists</div>
-        <ul class="ul1">
-          <li><a href="#">First Class Flights</a></li>
-          <li><a href="#">Accessible Travel</a></li>
-          <li><a href="#">Amazing Cruises</a></li>
-        </ul>
-
         <div class="social2_wrapper">
           <ul class="social2 clearfix">
             <li class="nav1"><a href="#"></a></li>
@@ -32,19 +20,23 @@
             <li class="nav6"><a href="#"></a></li>
           </ul>
         </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="bot1_title">Quick Links</div>
+        <ul class="footerNav">
+          <li><a href="<?= base_url(); ?>">Home</a></li>
+          <li><a href="<?= base_url(); ?>about">About Us</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="<?= base_url();?>destinations">Destinations</a></li>
+          <li><a href="#">Hotels</a></li>
+          <li><a href="#">Contacts</a></li>
+        </ul>
 
       </div>
       <div class="col-sm-3">
         <div class="bot1_title">Our Twitter</div>
         <div class="twits1">
-          <div class="twit1">
-           <a href="#"> @travel</a> Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-           <div class="date">5 minutes ago</div>
-         </div>
-         <div class="twit1">
-           <a href="#">@leo</a> Nam liber tempor cum soluta nobis option congue nihil imperdiet doming id quod mazim.
-           <div class="date">2 days ago</div>
-         </div>
+          <a class="twitter-timeline" data-width="500" data-height="250" href="https://twitter.com/TwitterDev/timelines/539487832448843776?ref_src=twsrc%5Etfw">National Park Tweets - Curated tweets by TwitterDev</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
        </div>
      </div>
      <div class="col-sm-3">

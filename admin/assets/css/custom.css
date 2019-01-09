@@ -38,3 +38,9 @@
   font-weight: bold;
   color:#f30d02;
 }
+.footerNav li {
+  padding: 5px 0px;
+}
+.footerNav li a{
+  text-decoration: none;
+}

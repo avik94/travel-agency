@@ -34,7 +34,7 @@
   <script src="<?= base_url('admin/assets/'); ?>js/jquery.caroufredsel.js"></script>
   <script src="<?= base_url('admin/assets/'); ?>js/jquery.touchSwipe.min.js"></script>
   <script src="<?= base_url('admin/assets/'); ?>js/jquery.ui.totop.js"></script>
-  <script src="<?= base_url('admin/assets/'); ?>js/script.js"></script>  
+  <script src="<?= base_url('admin/assets/'); ?>js/script.js"></script>
 
 </head>
 <body class="front">
@@ -42,8 +42,9 @@
     <div class="top1_wrapper">
       <div class="container">
         <div class="top1 clearfix">
-          <div class="email1"><a href="#">support@travelagency.com</a></div>
-          <div class="phone1">+917 3386831</div>
+          <div class="email1"><a href="<?php echo $siteAddress->email;?>"><?php echo $siteAddress->email;?></a></div>
+          <div class="phone1"><?php echo $siteAddress->phone_no_1; ?></div>
+          <div class="phone1"><?php echo $siteAddress->phone_no_1; ?></div>
           <div class="social_wrapper">
             <ul class="social clearfix">
               <li><a href="#"><i class="fa fa-facebook"></i></a></li>

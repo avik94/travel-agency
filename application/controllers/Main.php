@@ -11,18 +11,27 @@ class Main extends CI_Controller {
 	public function index(){
 		$data['active']='home';
 		$data['siteData'] = $this->Model->getOneRow('sitedata');
+		$data['siteAddress'] = $this->Model->getOneRow('address'); //site address
+		$data['footerDetails'] = $this->Model->getTableDataForOneRow("ta18_footer_part1");//footerData
+		$data['navigationLink'] = $this->Model->getTableDataForOneRow("ta18_footer_part2");//footerData
 		$this->load->template('common/header','index','common/footer', $data);
 	}
 	// about page
 	public function about(){
 		$data['active']='about';
 		$data['siteData'] = $this->Model->getOneRow('sitedata');
+		$data['siteAddress'] = $this->Model->getOneRow('address'); //site address
+		$data['footerDetails'] = $this->Model->getTableDataForOneRow("ta18_footer_part1");//footerData
+		$data['navigationLink'] = $this->Model->getTableDataForOneRow("ta18_footer_part2");//footerData
 		$this->load->template('common/header','about','common/footer', $data);
 	}
 	// destination page
 	public function destination(){
 		$data['active']='destination';  //header data
 		$data['siteData'] = $this->Model->getOneRow('sitedata'); //site global details
+		$data['siteAddress'] = $this->Model->getOneRow('address'); //site address
+		$data['footerDetails'] = $this->Model->getTableDataForOneRow("ta18_footer_part1"); //footerData
+		$data['navigationLink'] = $this->Model->getTableDataForOneRow("ta18_footer_part2"); //footerData
 
 		// pagination
 		$this->load->library('pagination');
@@ -48,6 +57,9 @@ class Main extends CI_Controller {
 
 		$data['active']='allLocation';  //header data(we are not using it but it is need to avoid error)
 		$data['siteData'] = $this->Model->getOneRow('sitedata'); //site global details
+		$data['siteAddress'] = $this->Model->getOneRow('address'); //site address
+		$data['footerDetails'] = $this->Model->getTableDataForOneRow("ta18_footer_part1"); //footerData
+		$data['navigationLink'] = $this->Model->getTableDataForOneRow("ta18_footer_part2"); //footerData
 		$data["destinationLocation"] = $this->Model->getSpecificData("locations",$target); //geting data with id
 
 		$this->load->template('common/header','destination/all-location','common/footer', $data);
@@ -59,6 +71,9 @@ class Main extends CI_Controller {
 		$targetLocation["location_id"] = $getId;
 		$data['active']='sigleLocationDetail';  //header data(we are not using it but it is need to avoid error)
 		$data['siteData'] = $this->Model->getOneRow('sitedata'); //site global details
+		$data['siteAddress'] = $this->Model->getOneRow('address'); //site address
+		$data['footerDetails'] = $this->Model->getTableDataForOneRow("ta18_footer_part1"); //footerData
+		$data['navigationLink'] = $this->Model->getTableDataForOneRow("ta18_footer_part2"); //footerData
 		$data['allLocationData'] = $this->Model->getSpecificData("locations",$target); //geting location data with id
 		$data['allHotelsData'] = $this->Model->getSpecificData("hotels",$targetLocation); //geting hotels data with id
 		$data["countHotel"] = count($this->Model->getSpecificData("hotels",$targetLocation));//counting hotel is available or not
@@ -68,6 +83,9 @@ class Main extends CI_Controller {
 	public function searchForm(){
 		$data['active']='search';
 		$data['siteData'] = $this->Model->getOneRow('sitedata');
+		$data['siteAddress'] = $this->Model->getOneRow('address'); //site address
+		$data['footerDetails'] = $this->Model->getTableDataForOneRow("ta18_footer_part1"); //footerData
+		$data['navigationLink'] = $this->Model->getTableDataForOneRow("ta18_footer_part2"); //footerData
 		$destinationId = $this->input->post("des");
 		$locationId = $this->input->post("loc");
 		// targeting id and destination_id of locations table

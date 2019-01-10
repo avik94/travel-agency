@@ -13,6 +13,12 @@ class Model extends CI_Model {
 		$data = $qry->result();
 		return $data;
 	}
+	// getting one row table data
+	public function getTableDataForOneRow($tableName){
+		$qry = $this->db->get($tableName);
+		$data = $qry->row();
+		return $data;
+	}
 	// getting table data with limit
 	public function getTableDataWithLimit($tableName,$limit,$offset){
 		$qry = $this->db->get($tableName,$limit,$offset);

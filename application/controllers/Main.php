@@ -96,4 +96,16 @@ class Main extends CI_Controller {
 
 		$this->load->template('common/header','destination/search-result','common/footer', $data);
 	}
+	// on destination change the location dropdown automatic update
+	public function onchangeDestination(){
+		$target["destination_id"]= $this->input->post("id");
+		$data = $this->Model->getSpecificData("locations",$target);
+		if ($data) {
+			echo "<option>Select</option>";
+			foreach ($data as $value) {
+				echo '<option value='.$value->id.'>'.$value->name.'</option>';
+			}
+		}
+	}
+
 }

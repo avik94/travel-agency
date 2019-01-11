@@ -22,8 +22,10 @@
                   <div class="col-sm-5">
                     <div class="select1_wrapper">
                       <label>Enter Destination Name</label>
+
                       <div class="select1_inner">
-                          <select class="select2 select" name="des" style="width: 100%" >
+                          <select class="select2 " name="des" style="width: 100%" id="destination">
+                            <option value="">Select</option>
                             <?php foreach ($allDestinations as $data):?>
                               <option value="<?php echo $data->id; ?>"><?php echo $data->name; ?></option>
                             <?php endforeach; ?>
@@ -35,10 +37,8 @@
                     <div class="select1_wrapper">
                       <label>Enter Location Name:</label>
                       <div class="select1_inner">
-                        <select class="select2 select" name="loc" style="width: 100%">
-                          <?php foreach ($allLocations as $data):?>
-                          <option  value="<?php echo $data->id; ?>"><?php echo $data->name; ?></option>
-                          <?php endforeach; ?>
+                        <select class="select2" name="loc" style="width: 100%" id="location">
+                          <option value="">Select</option>
                         </select>
                       </div>
                     </div>
@@ -109,3 +109,21 @@
 
   </div>
 </div>
+<!-- this script is used when user enter data in destination -->
+<!-- it automatically search location selection according to the destination -->
+<script>
+  $(document).ready(function(){
+    $("#destination").change(function(){
+      var value = $(this).val();
+      $.ajax({
+        type:"POST",
+        url:"<?php base_url(); ?>Main/onchangeDestination",
+        data:{"id":value},
+        success: function(data){
+          $("#location").html(data);
+
+        }
+      });
+    })
+  });
+</script>

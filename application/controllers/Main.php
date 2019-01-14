@@ -52,7 +52,7 @@ class Main extends CI_Controller {
 
 	// all location for single destination
 	public function allLocation(){
-		$getId = $this->input->get('id'); // get the id that is coming from the anchor of destination
+		$getId = $this->input->get("id"); // get the id that is coming from the anchor of destination
 		$target["destination_id"] = $getId;
 
 		$data['active']='allLocation';  //header data(we are not using it but it is need to avoid error)
@@ -61,8 +61,13 @@ class Main extends CI_Controller {
 		$data['footerDetails'] = $this->Model->getTableDataForOneRow("ta18_footer_part1"); //footerData
 		$data['navigationLink'] = $this->Model->getTableDataForOneRow("ta18_footer_part2"); //footerData
 		$data["destinationLocation"] = $this->Model->getSpecificData("locations",$target); //geting data with id
+		$count = count($this->Model->getSpecificData("locations",$target));
+		if ($count != 0){
+			$this->load->template('common/header','destination/all-location','common/footer', $data);
+		}else{
+			echo "<h2>404 Page Not Found .!Something Wents wrong<h4>";
+		}
 
-		$this->load->template('common/header','destination/all-location','common/footer', $data);
 	}
 	// single location
 	public function singleLocationDetail(){

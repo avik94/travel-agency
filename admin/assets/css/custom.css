@@ -44,3 +44,7 @@
 .footerNav li a{
   text-decoration: none;
 }
+.hotelTittle{
+  padding-bottom: 5px!important;
+  border-bottom: 1px solid;
+}

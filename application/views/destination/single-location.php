@@ -120,7 +120,7 @@
                                   <img src="https://demo.gridgum.com/templates/Travel-agency/images/star3.png" alt="">
                                 </div>
                               </div>
-                              <div class="right_side"><a href="#" class="btn-default btn1">View</a></div>
+                              <div class="right_side"><a href="<?php echo base_url(); ?>hotels/<?php echo $data->id; ?>" class="btn-default btn1">View</a></div>
                             </div>
                           </div>
                         </div>

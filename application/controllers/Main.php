@@ -113,4 +113,17 @@ class Main extends CI_Controller {
 		}
 	}
 
+	// single hotel page
+	public function singleHotel($id){
+		$data['active']='singleHotel';
+		$data['siteData'] = $this->Model->getOneRow('sitedata');
+		$data['siteAddress'] = $this->Model->getOneRow('address'); //site address
+		$data['footerDetails'] = $this->Model->getTableDataForOneRow("ta18_footer_part1"); //footerData
+		$data['navigationLink'] = $this->Model->getTableDataForOneRow("ta18_footer_part2"); //footerData
+		$target["id"] = $id;
+		$data["hotelData"] = $this->Model->getSpecificData("hotels",$target);
+		$this->load->template('common/header','hotels/single-hotel','common/footer', $data);
+
+	}
+
 }

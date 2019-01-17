@@ -42,31 +42,38 @@
                                 </div>
                             </div>
                             <div class="clearfix"></div>
-                            <span class="nights">10-night stay</span>
                             <div class="clearfix"></div>
                             <div class="col-sm-12 no-padding margin-top">
                                 <div class="input1_wrapper">
-                                    <label class="col-md-6" style="padding-left:0;padding-top:12px;">Rooms:</label>
+                                    <label class="col-md-6" style="padding-left:0;padding-top:12px;">Name:</label>
                                     <div class="input2_inner col-md-6" style="padding-right:0;padding-left:0;">
-                                        <input type="text" class="input" value="1" disabled>
+                                        <input type="text" class="input">
                                     </div>
                                 </div>
                             </div>
                             <div class="clearfix"></div>
                             <div class="col-sm-12 no-padding margin-top">
                                 <div class="input2_wrapper">
-                                    <label class="col-md-6" style="padding-left:0;padding-top:12px;">Adults:</label>
+                                    <label class="col-md-6" style="padding-left:0;padding-top:12px;">Phone No:</label>
                                     <div class="input2_inner col-md-6" style="padding-right:0;padding-left:0;">
-                                        <input type="text" class="input" value="2" disabled>
+                                        <input type="text" class="input">
                                     </div>
                                 </div>
                             </div>
                             <div class="clearfix"></div>
                             <div class="col-sm-12 no-padding margin-top">
                                 <div class="input1_wrapper">
-                                    <label class="col-md-6" style="padding-left:0;padding-top:12px;">Children:</label>
+                                    <label class="col-md-6" style="padding-left:0;padding-top:12px;">Email:</label>
                                     <div class="input2_inner col-md-6" style="padding-right:0;padding-left:0;">
-                                        <input type="text" class="input" value="0" disabled>
+                                        <input type="text" class="input">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 no-padding margin-top">
+                                <div class="input1_wrapper">
+                                    <label class="col-md-6" style="padding-left:0;padding-top:12px;">Room Type:</label>
+                                    <div class="input2_inner col-md-6" style="padding-right:0;padding-left:0;">
+                                        <input type="text" class="input">
                                     </div>
                                 </div>
                             </div>
@@ -76,15 +83,6 @@
                                     <label class="col-md-6" style="padding-left:0;padding-top:12px;font-weight:500;color:#464646;font-size:13px;">Price:</label>
                                     <div class="col-md-6 price-left" style="padding-right:0;padding-left:0;">
                                         <span class="red">$150</span>/<span class="blue">night</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="col-sm-12 no-padding margin-top">
-                                <div class="input1_wrapper">
-                                    <label class="col-md-6" style="padding-left:0;padding-top:12px;font-weight:500;color:#464646;font-size:13px;">Total Booking:</label>
-                                    <div class="col-md-6 price-total-left" style="padding-right:0;padding-left:0;">
-                                        <span class="red">$1500</span>
                                     </div>
                                 </div>
                             </div>

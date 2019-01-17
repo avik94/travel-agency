@@ -12,7 +12,7 @@
               <?php foreach ($hotelData as $data):?>
                 <div class="col-sm-3">
                     <div class="sidebar-block">
-                        <form action="https://demo.gridgum.com/templates/Travel-agency/javascript;">
+                        <form id="bookingCheckForm">
                             <h3><?= $data->name; ?></h3>
                             <span class="star-rating-left">
                                 <img src="https://demo.gridgum.com/templates/Travel-agency/images/star1.png">
@@ -27,8 +27,8 @@
                             <div class="col-sm-12 no-padding margin-top">
                                 <div class="input1_wrapper">
                                     <label>Check-In:</label>
-                                    <div class="input1_inner">
-                                        <input type="text" class="input" value="16/07/2014" disabled>
+                                    <div class="input1_wrapper">
+                                        <input type="date" class="dateClass input" name="checkIn" value="16/07/2014">
                                     </div>
                                 </div>
                             </div>
@@ -36,8 +36,8 @@
                             <div class="col-sm-12 no-padding margin-top">
                                 <div class="input1_wrapper">
                                     <label>Check-Out:</label>
-                                    <div class="input1_inner">
-                                        <input type="text" class="input" value="26/07/2014" disabled>
+                                    <div class="input1_wrapper">
+                                        <input type="date" class="input dateClass" name="checkOut" value="26/07/2014">
                                     </div>
                                 </div>
                             </div>
@@ -47,7 +47,7 @@
                                 <div class="input1_wrapper">
                                     <label class="col-md-6" style="padding-left:0;padding-top:12px;">Name:</label>
                                     <div class="input2_inner col-md-6" style="padding-right:0;padding-left:0;">
-                                        <input type="text" class="input">
+                                        <input type="text" name="name" class="input">
                                     </div>
                                 </div>
                             </div>
@@ -56,7 +56,7 @@
                                 <div class="input2_wrapper">
                                     <label class="col-md-6" style="padding-left:0;padding-top:12px;">Phone No:</label>
                                     <div class="input2_inner col-md-6" style="padding-right:0;padding-left:0;">
-                                        <input type="text" class="input">
+                                        <input type="text" name="phoneNo" class="input">
                                     </div>
                                 </div>
                             </div>
@@ -65,15 +65,18 @@
                                 <div class="input1_wrapper">
                                     <label class="col-md-6" style="padding-left:0;padding-top:12px;">Email:</label>
                                     <div class="input2_inner col-md-6" style="padding-right:0;padding-left:0;">
-                                        <input type="text" class="input">
+                                        <input type="email" name="email" class="input">
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-12 no-padding margin-top">
                                 <div class="input1_wrapper">
                                     <label class="col-md-6" style="padding-left:0;padding-top:12px;">Room Type:</label>
-                                    <div class="input2_inner col-md-6" style="padding-right:0;padding-left:0;">
-                                        <input type="text" class="input">
+                                    <div class="select1_inner col-md-6" style="padding-right:0;padding-left:0;">
+                                        <select class="select2 select2-accessible" name="roomType">
+                                          <option value="1">Single</option>
+                                          <option value="2">Double</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -88,7 +91,8 @@
                             </div>
                             <div class="clearfix"></div>
                             <div class="no-padding margin-top text-center" style="margin-top:30px;">
-                                <a href="https://demo.gridgum.com/templates/Travel-agency/booking-hotel-page.html" class="btn btn-default btn-cf-submit3" style="width:100%;">RESERVE NOW</a>
+                                <!-- <a href="https://demo.gridgum.com/templates/Travel-agency/booking-hotel-page.html" class="btn btn-default btn-cf-submit3" style="width:100%;">RESERVE NOW</a> -->
+                                <button type="submit" class="btn btn-default btn-cf-submit3" name="button">Reserve</button>
                             </div>
                             <div class="clearfix"></div>
 
@@ -183,5 +187,20 @@
             </div>
         </div>
     </div>
-
   </div>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("#bookingCheckForm").submit(function(event){
+        event.preventDefault();
+        $.ajax({
+          url:"<?= base_url();?>Main/bookingForm",
+          type:"post",
+          data:$("#bookingCheckForm").serialize(),
+          success:function(data){
+            alert(data);
+          }
+        });
+      });
+    });
+  </script>

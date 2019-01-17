@@ -125,5 +125,15 @@ class Main extends CI_Controller {
 		$this->load->template('common/header','hotels/single-hotel','common/footer', $data);
 
 	}
+	public function bookingForm(){
+		$data["checkIn"]=$this->input->post("checkIn");
+		$data["checkOut"]=$this->input->post("checkOut");
+		$data["name"]=$this->input->post("name");
+		$data["phoneNo"]=$this->input->post("phoneNo");
+		$data["email"]=$this->input->post("email");
+		$data["roomType"]=$this->input->post("roomType");
+		print_r($data);
+
+	}
 
 }

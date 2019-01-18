@@ -62,6 +62,15 @@
                             </div>
                             <div class="clearfix"></div>
                             <div class="col-sm-12 no-padding margin-top">
+                                <div class="input2_wrapper">
+                                    <label class="col-md-6" style="padding-left:0;padding-top:12px;">Address:</label>
+                                    <div class="input2_inner col-md-6" style="padding-right:0;padding-left:0;">
+                                        <input type="text" name="address" class="input">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-sm-12 no-padding margin-top">
                                 <div class="input1_wrapper">
                                     <label class="col-md-6" style="padding-left:0;padding-top:12px;">Email:</label>
                                     <div class="input2_inner col-md-6" style="padding-right:0;padding-left:0;">
@@ -74,8 +83,8 @@
                                     <label class="col-md-6" style="padding-left:0;padding-top:12px;">Room Type:</label>
                                     <div class="select1_inner col-md-6" style="padding-right:0;padding-left:0;">
                                         <select class="select2 select2-accessible" name="roomType">
-                                          <option value="1">Single</option>
-                                          <option value="2">Double</option>
+                                          <option value="single">Single</option>
+                                          <option value="double">Double</option>
                                         </select>
                                     </div>
                                 </div>

@@ -126,14 +126,24 @@ class Main extends CI_Controller {
 
 	}
 	public function bookingForm(){
-		$data["checkIn"]=$this->input->post("checkIn");
-		$data["checkOut"]=$this->input->post("checkOut");
-		$data["name"]=$this->input->post("name");
-		$data["phoneNo"]=$this->input->post("phoneNo");
-		$data["email"]=$this->input->post("email");
-		$data["roomType"]=$this->input->post("roomType");
-		print_r($data);
+		$data["check_in"] =$this->input->post("checkIn");
+		$data["check_out"] =$this->input->post("checkOut");
+		$data["name"] =$this->input->post("name");
+		$data["phone_no"] =$this->input->post("phoneNo");
+		$data["address"] =$this->input->post("address");
+		$data["email_id"] =$this->input->post("email");
 
+		$checkIn["check_in"] = $data["check_in"];
+		$checkOut["check_out"] = $data["check_out"];
+
+		$checkIndateCheck = count($this->Model->getSpecificData("reservations",$checkIn));
+		$checkOutdateCheck = count($this->Model->getSpecificData("reservations",$checkOut));
+
+		if($checkIndateCheck == 1 || $checkOutdateCheck==1 ){
+			echo "already booked";
+		}else{
+			echo "please";
+		}
 	}
 
 }

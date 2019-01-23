@@ -32,6 +32,14 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-sm-12 no-padding margin-top">
+                                <div class="input1_wrapper disableInput">
+                                    <label></label>
+                                    <div class="input1_wrapper">
+                                        <input type="number" class="dateClass input" name="hotelId" value="<?= $data->id;  ?>">
+                                    </div>
+                                </div>
+                            </div>
                             <div class="clearfix"></div>
                             <div class="col-sm-12 no-padding margin-top">
                                 <div class="input1_wrapper">

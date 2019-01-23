@@ -36,6 +36,13 @@ class Model extends CI_Model {
 		$data = $this->db->get_where($tableName,$target)->result();
 		return $data;
 	}
+	public function getSpecificColField($tableName,$target){
+		$this->db->select("id");
+		// $this->db->from($tableName);
+		$data = $this->db->get_where($tableName,$target)->row();
+
+		return $data;
+	}
 	// public function joinLocationDestination(){
 	// 	$this->db->select('*');
 	// 	$this->db->from('destinations');

@@ -52,3 +52,6 @@
   width: 220px;
   border: none;
 }
+.disableInput{
+  display:none!important;
+}

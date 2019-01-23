@@ -132,17 +132,34 @@ class Main extends CI_Controller {
 		$data["phone_no"] =$this->input->post("phoneNo");
 		$data["address"] =$this->input->post("address");
 		$data["email_id"] =$this->input->post("email");
+		$target["hotel_id"] = $this->input->post("hotelId"); //getiing the hotel id
+		$target["capacity"] = $this->input->post("roomType"); //getting the capacity
 
 		$checkIn["check_in"] = $data["check_in"];
 		$checkOut["check_out"] = $data["check_out"];
 
 		$checkIndateCheck = count($this->Model->getSpecificData("reservations",$checkIn));
 		$checkOutdateCheck = count($this->Model->getSpecificData("reservations",$checkOut));
+		$getting["room"] =$this->Model->getSpecificColField("rooms",$target); //getting room id with checkinh the hotel_id and room capacity
+		$data["room_id"] =$getting["room"]->id; //storing the room_id in data array for all input
+
+		// test
+		$this->db->select("capacity");
+		$hi["hi"] =$this->db->get("rooms")->result();
+		$emptyArray = [];
+		foreach ($hi["hi"] as $key => $value) {
+			$emptyArray[$key] = $value->capacity;
+		}
+		print_r($emptyArray);
+		// print_r($hi);
+		die();
+		//test
 
 		if($checkIndateCheck == 1 || $checkOutdateCheck==1 ){
 			echo "already booked";
 		}else{
 			echo "please";
+			print_r($data);
 		}
 	}
 

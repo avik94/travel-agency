@@ -144,13 +144,15 @@ class Main extends CI_Controller {
 		$data["room_id"] =$getting["room"]->id; //storing the room_id in data array for all input
 
 		// test
-		$this->db->select("capacity");
-		$hi["hi"] =$this->db->get("rooms")->result();
-		$emptyArray = [];
-		foreach ($hi["hi"] as $key => $value) {
-			$emptyArray[$key] = $value->capacity;
+		$this->db->select("check_in");
+		$hi["hi"] =$this->db->get("reservations")->result();
+		// $emptyArray = [];
+		foreach ($hi["hi"] as $value) {
+			if($checkIn["check_in"]>$value->check_in && $checkIn["check_in"]<'2019-01-19'){
+				echo "hurray";
+			}
 		}
-		print_r($emptyArray);
+		// echo($emptyArray[0]);
 		// print_r($hi);
 		die();
 		//test

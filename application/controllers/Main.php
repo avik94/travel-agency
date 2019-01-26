@@ -177,6 +177,9 @@ class Main extends CI_Controller {
 					if ($checkInDate->room_id == $data["room_id"]) { // checking enter room_id and saved room_id eqaul or not
 						echo "Room Not Available in this date";
 					}
+				}elseif ($checkIn["check_in"]<$key && $checkOut["check_out"]>$value) { //checking the availability if in booking date there are already booked date
+					echo "Room Not Available in this date";
+					break;
 				}
 			}
 		}

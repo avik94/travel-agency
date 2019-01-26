@@ -36,9 +36,8 @@ class Model extends CI_Model {
 		$data = $this->db->get_where($tableName,$target)->result();
 		return $data;
 	}
-	public function getSpecificColField($tableName,$target){
-		$this->db->select("id");
-		// $this->db->from($tableName);
+	public function getSpecificColField($selectedCol,$tableName,$target){
+		$this->db->select($selectedCol);
 		$data = $this->db->get_where($tableName,$target)->row();
 
 		return $data;

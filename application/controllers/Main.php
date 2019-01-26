@@ -126,43 +126,61 @@ class Main extends CI_Controller {
 
 	}
 	public function bookingForm(){
-		$data["check_in"] =$this->input->post("checkIn");
-		$data["check_out"] =$this->input->post("checkOut");
-		$data["name"] =$this->input->post("name");
-		$data["phone_no"] =$this->input->post("phoneNo");
-		$data["address"] =$this->input->post("address");
-		$data["email_id"] =$this->input->post("email");
-		$target["hotel_id"] = $this->input->post("hotelId"); //getiing the hotel id
-		$target["capacity"] = $this->input->post("roomType"); //getting the capacity
+		// validation start
+		$this->load->helper(array('form', 'url'));
+	 	$this->load->library('form_validation');
+		$this->form_validation->set_rules('checkIn', 'ChekIn', 'required');
+		$this->form_validation->set_rules('checkOut', 'CheckOut', 'required');
+		$this->form_validation->set_rules('name', 'Name', 'required');
+		$this->form_validation->set_rules('phoneNo', 'PhoneNo', 'required');
+		$this->form_validation->set_rules('address', 'Address', 'required');
+		$this->form_validation->set_rules('email', 'Email', 'required');
+		$this->form_validation->set_rules('roomType', 'RoomType', 'required');
+		if ($this->form_validation->run() == FALSE){
+	      echo validation_errors();;
+	  }else{
+			$data["check_in"] =$this->input->post("checkIn");
+			$data["check_out"] =$this->input->post("checkOut");
+			$data["name"] =$this->input->post("name");
+			$data["phone_no"] =$this->input->post("phoneNo");
+			$data["address"] =$this->input->post("address");
+			$data["email_id"] =$this->input->post("email");
+			$target["hotel_id"] = $this->input->post("hotelId"); //getiing the hotel id
+			$target["capacity"] = $this->input->post("roomType"); //getting the capacity
 
-		$checkIn["check_in"] = $data["check_in"];
-		$checkOut["check_out"] = $data["check_out"];
+			$checkIn["check_in"] = $data["check_in"];
+			$checkOut["check_out"] = $data["check_out"];
 
-		$checkIndateCheck = count($this->Model->getSpecificData("reservations",$checkIn));
-		$checkOutdateCheck = count($this->Model->getSpecificData("reservations",$checkOut));
-		$getting["room"] =$this->Model->getSpecificColField("rooms",$target); //getting room id with checkinh the hotel_id and room capacity
-		$data["room_id"] =$getting["room"]->id; //storing the room_id in data array for all input
-
-		// test
-		$this->db->select("check_in");
-		$hi["hi"] =$this->db->get("reservations")->result();
-		// $emptyArray = [];
-		foreach ($hi["hi"] as $value) {
-			if($checkIn["check_in"]>$value->check_in && $checkIn["check_in"]<'2019-01-19'){
-				echo "hurray";
+			$checkIndateCheck = count($this->Model->getSpecificData("reservations",$checkIn));
+			$checkOutdateCheck = count($this->Model->getSpecificData("reservations",$checkOut));
+			$getting["room"] =$this->Model->getSpecificColField("id","rooms",$target); //getting room id with checkinh the hotel_id and room capacity
+			$data["room_id"] =$getting["room"]->id; //storing the room_id in data array for all input
+			// selecting check out and check in value form reservation table
+			$this->db->select("check_in");
+			$checkInallData =$this->db->get("reservations")->result();
+			$this->db->select("check_out");
+			$checkOutallData =$this->db->get("reservations")->result();
+			// selecting check out and check in value form reservation table end
+			$emptArr1 = [];                                   //initialize blank array
+			foreach ($checkInallData as $key => $value) {
+				$emptArr1[$key] = $value->check_in;					//storing all check_in value in array
+			}
+			$emptArr2 = [];														//initialize blank array again
+			foreach ($checkOutallData as $key => $value) {
+				$emptArr2[$key] = $value->check_out;  //storing all check_in value in array
+			}
+			$combineArray = array_combine($emptArr1,$emptArr2); // combine both chek_in and check_out both value and store into a single array as key and value pair
+			foreach ($combineArray as $key => $value) {   // iterate big array
+				if($checkIn["check_in"]>=$key && $checkIn["check_in"]<=$value){ // check whether chek_in lies between check_out and chek_in
+					$targetChekIn["check_in"] = $key;
+					$checkInDate = $this->Model->getSpecificColField("room_id","reservations",$targetChekIn); //geting room_id from check_in
+					if ($checkInDate->room_id == $data["room_id"]) { // checking enter room_id and saved room_id eqaul or not
+						echo "Room Not Available in this date";
+					}
+				}
 			}
 		}
-		// echo($emptyArray[0]);
-		// print_r($hi);
-		die();
-		//test
-
-		if($checkIndateCheck == 1 || $checkOutdateCheck==1 ){
-			echo "already booked";
-		}else{
-			echo "please";
-			print_r($data);
-		}
+		// validation end
 	}
 
 }

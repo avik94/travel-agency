@@ -170,17 +170,35 @@ class Main extends CI_Controller {
 				$emptArr2[$key] = $value->check_out;  //storing all check_in value in array
 			}
 			$combineArray = array_combine($emptArr1,$emptArr2); // combine both chek_in and check_out both value and store into a single array as key and value pair
+			$i = 0;
 			foreach ($combineArray as $key => $value) {   // iterate big array
 				if($checkIn["check_in"]>=$key && $checkIn["check_in"]<=$value){ // check whether chek_in lies between check_out and chek_in
 					$targetChekIn["check_in"] = $key;
 					$checkInDate = $this->Model->getSpecificColField("room_id","reservations",$targetChekIn); //geting room_id from check_in
 					if ($checkInDate->room_id == $data["room_id"]) { // checking enter room_id and saved room_id eqaul or not
-						echo "Room Not Available in this date";
+						echo "Room Not Available in this date hi";
+					}else{
+						$i++;
+						$this->db->select("check_in");
+						$checkInallData =count($this->db->get("reservations")->result());
+						if($i == $checkInallData){
+							print_r($data);
+						}
 					}
-				}elseif ($checkIn["check_in"]<$key && $checkOut["check_out"]>$value) { //checking the availability if in booking date there are already booked date
+				}
+				// checking if check_in date lower than bookedcheck_in date and chek_out date is higher than the booked check_out date 
+				elseif ($checkIn["check_in"]<$key && $checkOut["check_out"]>$key) { //checking the availability if in booking date there are already booked date
 					echo "Room Not Available in this date";
 					break;
+				}else{
+					$i++;
+					$this->db->select("check_in");
+					$checkInallData =count($this->db->get("reservations")->result());
+					if($i == $checkInallData){
+						print_r($data);
+					}
 				}
+				// attention end here
 			}
 		}
 		// validation end

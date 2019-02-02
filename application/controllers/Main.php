@@ -176,7 +176,7 @@ class Main extends CI_Controller {
 					$targetChekIn["check_in"] = $key;
 					$checkInDate = $this->Model->getSpecificColField("room_id","reservations",$targetChekIn); //geting room_id from check_in
 					if ($checkInDate->room_id == $data["room_id"]) { // checking enter room_id and saved room_id eqaul or not
-						echo "Room Not Available in this date hi";
+						echo "Room Not Available in this date";
 					}else{
 						$i++;
 						$this->db->select("check_in");
@@ -186,17 +186,34 @@ class Main extends CI_Controller {
 						}
 					}
 				}
-				// checking if check_in date lower than bookedcheck_in date and chek_out date is higher than the booked check_out date 
+				// checking if check_in date lower than bookedcheck_in date and chek_out date is higher than the booked check_out date
 				elseif ($checkIn["check_in"]<$key && $checkOut["check_out"]>$key) { //checking the availability if in booking date there are already booked date
-					echo "Room Not Available in this date";
-					break;
+					$targetChekIn["check_in"] = $key;
+					$checkInDate = $this->Model->getSpecificColField("room_id","reservations",$targetChekIn); //geting room_id from check_in
+					if ($checkInDate->room_id == $data["room_id"]){
+						echo "Room Not Available in this datee";
+					}else{
+						print_r($data);
+						break;
+					}
 				}else{
 					$i++;
 					$this->db->select("check_in");
 					$checkInallData =count($this->db->get("reservations")->result());
 					if($i == $checkInallData){
-						print_r($data);
+						// database query needed to be added ;
+						echo "Booked";
 					}
+					// $this->email->from('conatct@travel-agency.com', 'Administration');
+					// $this->email->to("avikmozcoder@gmail.com");
+					// // $this->email->cc('another@another-example.com');
+					// // $this->email->bcc('them@their-example.com');
+					// //
+					// $this->email->subject('Email Test');
+					// $this->email->message('Testing the email class.');
+					//
+					// $this->email->send();
+
 				}
 				// attention end here
 			}

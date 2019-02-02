@@ -215,7 +215,10 @@
           type:"post",
           data:$("#bookingCheckForm").serialize(),
           success:function(data){
-            alert(data);
+            var x = data;
+            if(x === "Booked"){
+              swal("Congrats! Room Booked ", "Thank You! For Choosing Our Hotel", "success");
+            }
           }
         });
       });

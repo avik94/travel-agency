@@ -176,7 +176,7 @@ class Main extends CI_Controller {
 					$targetChekIn["check_in"] = $key;
 					$checkInDate = $this->Model->getSpecificColField("room_id","reservations",$targetChekIn); //geting room_id from check_in
 					if ($checkInDate->room_id == $data["room_id"]) { // checking enter room_id and saved room_id eqaul or not
-						echo "Room Not Available in this date";
+						echo "Room_Not_Available";
 					}else{
 						$i++;
 						$this->db->select("check_in");
@@ -191,7 +191,7 @@ class Main extends CI_Controller {
 					$targetChekIn["check_in"] = $key;
 					$checkInDate = $this->Model->getSpecificColField("room_id","reservations",$targetChekIn); //geting room_id from check_in
 					if ($checkInDate->room_id == $data["room_id"]){
-						echo "Room Not Available in this datee";
+						echo "checkOut_between_bookingDate";
 					}else{
 						print_r($data);
 						break;

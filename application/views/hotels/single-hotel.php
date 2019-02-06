@@ -219,6 +219,13 @@
             if(x === "Booked"){
               swal("Congrats! Room Booked ", "Thank You! For Choosing Our Hotel", "success");
             }
+            if(x === "Room_Not_Available"){
+              swal("Sorry! No Room Available. ", "Please Try Another date", "warning");
+            }
+            if(x === "checkOut_between_bookingDate"){
+              swal("Sorry! No Room Available!. ", "Please Try Another date", "warning");
+            }
+            // checkOut_between_bookingDate
           }
         });
       });

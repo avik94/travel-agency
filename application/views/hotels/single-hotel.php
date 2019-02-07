@@ -217,7 +217,7 @@
           success:function(data){
             var x = data;
             if(x === "Booked"){
-              swal("Congrats! Room Booked ", "Thank You! For Choosing Our Hotel", "success");
+              swal("Congrats! Room Booked ", "Thank You! Conformatin Mail Sent To your E-mail", "success");
             }
             if(x === "Room_Not_Available"){
               swal("Sorry! No Room Available. ", "Please Try Another date", "warning");

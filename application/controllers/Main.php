@@ -14,6 +14,7 @@ class Main extends CI_Controller {
 		$data['siteAddress'] = $this->Model->getOneRow('address'); //site address
 		$data['footerDetails'] = $this->Model->getTableDataForOneRow("ta18_footer_part1");//footerData
 		$data['navigationLink'] = $this->Model->getTableDataForOneRow("ta18_footer_part2");//footerData
+		$data["allDestinations"] = $this->Model->getTableData("destinations");
 		$this->load->template('common/header','index','common/footer', $data);
 	}
 	// about page
@@ -203,17 +204,29 @@ class Main extends CI_Controller {
 					if($i == $checkInallData){
 						// database query needed to be added ;
 						echo "Booked";
-					}
-					// $this->email->from('conatct@travel-agency.com', 'Administration');
-					// $this->email->to("avikmozcoder@gmail.com");
-					// // $this->email->cc('another@another-example.com');
-					// // $this->email->bcc('them@their-example.com');
-					// //
-					// $this->email->subject('Email Test');
-					// $this->email->message('Testing the email class.');
-					//
-					// $this->email->send();
+						$this->load->library('email');
+						$config['protocol']    = 'smtp';
+						$config['smtp_host']    = 'ssl://smtp.gmail.com';
+						$config['smtp_port']    = '465';
+						$config['smtp_timeout'] = '7';
+						$config['smtp_user']    = 'avikmozcoder@gmail.com';
+						$config['smtp_pass']    = 'mozcoder123';
+						$config['charset']    = 'utf-8';
+						$config['newline']    = "\r\n";
+						$config['mailtype'] = 'text'; // or html
+						$config['validate'] = TRUE; // bool whether to validate email or not
 
+						$this->email->initialize($config);
+						$this->email->from('avikmozcoder@gmail.com', 'Administration');
+						$this->email->to($data["email_id"]);
+						// $this->email->cc('another@another-example.com');
+						// $this->email->bcc('them@their-example.com');
+						//
+						$this->email->subject('Booking Confirmation');
+						$this->email->message('Room Booked for '.$data["name"].' from '.$data["check_in"].' to '.$data["check_out"].' You Are Advised To Contact Our Administration for your payment, Otherwise Booking will be Cancelled');
+
+						$this->email->send();
+					}
 				}
 				// attention end here
 			}

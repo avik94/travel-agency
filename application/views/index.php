@@ -66,331 +66,46 @@
         <div class="tabs_tabs tabs1_tabs">
 
             <ul>
-              <li class="active flights"><a href="#tabs-1">Flights</a></li>
-              <li class="hotels"><a href="#tabs-2">Hotels</a></li>
-              <li class="cars"><a href="#tabs-3">Cars</a></li>
-              <li class="cruises"><a href="#tabs-4">Cruises</a></li>
+              <li class="active flights"><a href="#tabs-1">Search Here</a></li>
             </ul>
 
         </div>
         <div class="tabs_content tabs1_content">
 
             <div id="tabs-1">
-              <form action="javascript:;" class="form1">
-                <div class="row">
-                  <div class="col-sm-4 col-md-2">
-                    <div class="select1_wrapper">
-                      <label>Flying from:</label>
-                      <div class="select1_inner">
-                        <select class="select2 select" style="width: 100%">
-                          <option value="1">City or Airport</option>
-                          <option value="2">Alaska</option>
-                          <option value="3">Bahamas</option>
-                          <option value="4">Bermuda</option>
-                          <option value="5">Canada</option>
-                          <option value="6">Caribbean</option>
-                          <option value="7">Europe</option>
-                          <option value="8">Hawaii</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-4 col-md-2">
-                    <div class="select1_wrapper">
-                      <label>To:</label>
-                      <div class="select1_inner">
-                        <select class="select2 select" style="width: 100%">
-                          <option value="1">City or Airport</option>
-                          <option value="2">Alaska</option>
-                          <option value="3">Bahamas</option>
-                          <option value="4">Bermuda</option>
-                          <option value="5">Canada</option>
-                          <option value="6">Caribbean</option>
-                          <option value="7">Europe</option>
-                          <option value="8">Hawaii</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-4 col-md-2">
-                    <div class="input1_wrapper">
-                      <label>Departing:</label>
-                      <div class="input1_inner">
-                        <input type="text" class="input datepicker" value="Mm/Dd/Yy">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-4 col-md-2">
-                    <div class="input1_wrapper">
-                      <label>Returning:</label>
-                      <div class="input1_inner">
-                        <input type="text" class="input datepicker" value="Mm/Dd/Yy">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-4 col-md-1">
-                    <div class="select1_wrapper">
-                      <label>Adult:</label>
-                      <div class="select1_inner">
-                        <select class="select2 select select3" style="width: 100%">
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                          <option value="8">8</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-4 col-md-1">
-                    <div class="select1_wrapper">
-                      <label>Child:</label>
-                      <div class="select1_inner">
-                        <select class="select2 select select3" style="width: 100%">
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                          <option value="8">8</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-4 col-md-2">
-                    <div class="button1_wrapper">
-                      <button type="submit" class="btn-default btn-form1-submit">Search</button>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div id="tabs-2">
-              <form action="javascript:;" class="form1">
-                <div class="row">
-                  <div class="col-sm-4 col-md-4">
-                    <div class="select1_wrapper">
-                      <label>City or Hotel Name:</label>
-                      <div class="select1_inner">
-                        <select class="select2 select" style="width: 100%">
-                          <option value="1">Enter a destination or hotel name</option>
-                          <option value="2">Lorem ipsum dolor sit amet</option>
-                          <option value="3">Duis autem vel eum</option>
-                          <option value="4">Ut wisi enim ad minim veniam</option>
-                          <option value="5">Nam liber tempor cum</option>
-                          <option value="6">At vero eos et accusam et</option>
-                          <option value="7">Consetetur sadipscing elitr</option>
-                          <option value="8">Sed diam nonumy</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-4 col-md-2">
-                    <div class="input1_wrapper">
-                      <label>Check-In:</label>
-                      <div class="input1_inner">
-                        <input type="text" class="input datepicker" value="Mm/Dd/Yy">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-4 col-md-2">
-                    <div class="input1_wrapper">
-                      <label>Check-Out:</label>
-                      <div class="input1_inner">
-                        <input type="text" class="input datepicker" value="Mm/Dd/Yy">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-4 col-md-2">
-                    <div class="select1_wrapper">
-                      <label>Adult:</label>
-                      <div class="select1_inner">
-                        <select class="select2 select" style="width: 100%">
-                          <option value="1">Room  for  1  adult</option>
-                          <option value="2">Room  for  2  adult</option>
-                          <option value="3">Room  for  3  adult</option>
-                          <option value="4">Room  for  4  adult</option>
-                          <option value="5">Room  for  5  adult</option>
-                          <option value="6">Room  for  6  adult</option>
-                          <option value="7">Room  for  7  adult</option>
-                          <option value="8">Room  for  8  adult</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-4 col-md-2">
-                    <div class="button1_wrapper">
-                      <button type="submit" class="btn-default btn-form1-submit">Search</button>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div id="tabs-3">
-              <form action="javascript:;" class="form1">
-                <div class="row">
-                  <div class="col-sm-4 col-md-2">
-                    <div class="select1_wrapper">
-                      <label>Country:</label>
-                      <div class="select1_inner">
-                        <select class="select2 select" style="width: 100%">
-                          <option value="1">Please Select</option>
-                          <option value="2">Alaska</option>
-                          <option value="3">Bahamas</option>
-                          <option value="4">Bermuda</option>
-                          <option value="5">Canada</option>
-                          <option value="6">Caribbean</option>
-                          <option value="7">Europe</option>
-                          <option value="8">Hawaii</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-4 col-md-2">
-                    <div class="select1_wrapper">
-                      <label>City:</label>
-                      <div class="select1_inner">
-                        <select class="select2 select" style="width: 100%">
-                          <option value="1">Please Select</option>
-                          <option value="2">Alaska</option>
-                          <option value="3">Bahamas</option>
-                          <option value="4">Bermuda</option>
-                          <option value="5">Canada</option>
-                          <option value="6">Caribbean</option>
-                          <option value="7">Europe</option>
-                          <option value="8">Hawaii</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-4 col-md-2">
-                    <div class="select1_wrapper">
-                      <label>Location:</label>
-                      <div class="select1_inner">
-                        <select class="select2 select" style="width: 100%">
-                          <option value="1">Please Select</option>
-                          <option value="2">Alaska</option>
-                          <option value="3">Bahamas</option>
-                          <option value="4">Bermuda</option>
-                          <option value="5">Canada</option>
-                          <option value="6">Caribbean</option>
-                          <option value="7">Europe</option>
-                          <option value="8">Hawaii</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-4 col-md-2">
-                    <div class="input1_wrapper">
-                      <label>Pick up Date:</label>
-                      <div class="input1_inner">
-                        <input type="text" class="input datepicker" value="Mm/Dd/Yy">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-4 col-md-2">
-                    <div class="input1_wrapper">
-                      <label>Drop off Date:</label>
-                      <div class="input1_inner">
-                        <input type="text" class="input datepicker" value="Mm/Dd/Yy">
-                      </div>
-                    </div>
-                  </div>
+              <form action="search-result" method="post" class="form1">
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <div class="select1_wrapper">
+                        <label>Enter Destination Name</label>
 
-
-                  <div class="col-sm-4 col-md-2">
-                    <div class="button1_wrapper">
-                      <button type="submit" class="btn-default btn-form1-submit">Search</button>
+                        <div class="select1_inner">
+                            <select class="select2 " name="des" style="width: 100%" id="destination">
+                              <option value="">Select</option>
+                              <?php foreach ($allDestinations as $data):?>
+                                <option value="<?php echo $data->id; ?>"><?php echo $data->name; ?></option>
+                              <?php endforeach; ?>
+                            </select>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div id="tabs-4">
-              <form action="javascript:;" class="form1">
-                <div class="row">
-                  <div class="col-sm-4 col-md-2">
-                    <div class="select1_wrapper">
-                      <label>Sail To:</label>
-                      <div class="select1_inner">
-                        <select class="select2 select" style="width: 100%">
-                          <option value="1">All destinations</option>
-                          <option value="2">Alaska</option>
-                          <option value="3">Bahamas</option>
-                          <option value="4">Bermuda</option>
-                          <option value="5">Canada</option>
-                          <option value="6">Caribbean</option>
-                          <option value="7">Europe</option>
-                          <option value="8">Hawaii</option>
-                        </select>
+                    <div class="col-sm-5">
+                      <div class="select1_wrapper">
+                        <label>Enter Location Name:</label>
+                        <div class="select1_inner">
+                          <select class="select2" name="loc" style="width: 100%" id="location">
+                            <option value="">Select</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-2">
+                      <div class="button1_wrapper">
+                        <button type="submit" class="btn-default btn-form1-submit">Search</button>
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-4 col-md-2">
-                    <div class="select1_wrapper">
-                      <label>Sail From:</label>
-                      <div class="select1_inner">
-                        <select class="select2 select" style="width: 100%">
-                          <option value="1">All ports</option>
-                          <option value="2">Alaska</option>
-                          <option value="3">Bahamas</option>
-                          <option value="4">Bermuda</option>
-                          <option value="5">Canada</option>
-                          <option value="6">Caribbean</option>
-                          <option value="7">Europe</option>
-                          <option value="8">Hawaii</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-sm-4 col-md-2">
-                    <div class="input1_wrapper">
-                      <label>Start Date:</label>
-                      <div class="input1_inner">
-                        <input type="text" class="input datepicker" value="From any month">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-4 col-md-2">
-                    <div class="input1_wrapper">
-                      <label>End of Date:</label>
-                      <div class="input1_inner">
-                        <input type="text" class="input datepicker" value="To any month">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-4 col-md-2">
-                    <div class="select1_wrapper">
-                      <label>Cruise Ship:</label>
-                      <div class="select1_inner">
-                        <select class="select2 select" style="width: 100%">
-                          <option value="1">All Ships</option>
-                          <option value="2">Alaska</option>
-                          <option value="3">Bahamas</option>
-                          <option value="4">Bermuda</option>
-                          <option value="5">Canada</option>
-                          <option value="6">Caribbean</option>
-                          <option value="7">Europe</option>
-                          <option value="8">Hawaii</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-
-
-                  <div class="col-sm-4 col-md-2">
-                    <div class="button1_wrapper">
-                      <button type="submit" class="btn-default btn-form1-submit">Search</button>
-                    </div>
-                  </div>
-                </div>
-              </form>
+                </form>
             </div>
 
         </div>
@@ -846,3 +561,18 @@ sod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad min
     </div>
   </div>
 </div>
+<script>
+  $(document).ready(function(){
+    $("#destination").change(function(){
+      var value = $(this).val();
+      $.ajax({
+        type:"POST",
+        url:"<?php base_url(); ?>Main/onchangeDestination",
+        data:{"id":value},
+        success: function(data){
+          $("#location").html(data);
+        }
+      });
+    })
+  });
+</script>

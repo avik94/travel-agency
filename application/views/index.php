@@ -204,7 +204,7 @@
 
       <div class="row">
         <div class="col-sm-10 animated" data-animation="fadeInLeft" data-animation-delay="100">
-          <div class="txt1">Caucasus Vacation Packages</div>
+          <div class="txt1">Vacation Packages On Discount</div>
           <div class="txt2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper.</div>
           <div class="txt3">From: Khazbegi (Goergia) <strong>$159.00</strong><span>person</span></div>
         </div>
@@ -220,7 +220,7 @@
 <div id="popular_cruises1">
   <div class="container">
 
-    <h2 class="animated" data-animation="fadeInUp" data-animation-delay="100">POPULAR CRUISES</h2>
+    <h2 class="animated" data-animation="fadeInUp" data-animation-delay="100">POPULAR DESTIINATION</h2>
 
     <div class="title1 animated" data-animation="fadeInUp" data-animation-delay="200">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod <br>tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
 
@@ -235,19 +235,20 @@
                 <div class="inner">
                   <div class="carousel main">
                     <ul>
+                      <?php foreach ($allDestinations as $data):?>
                       <li>
                         <div class="popular">
                           <div class="popular_inner">
                             <figure>
-                              <img src="<?php echo base_url(); ?>admin/assets/images/popular01.jpg" alt="" class="img-responsive">
+                              <img src="<?php echo base_url(); ?>admin/assets/images/destinations/<?php echo $data->image; ?>" alt="" class="img-responsive">
                               <div class="over">
-                                <div class="v1">Bahamas <span>17 Deal Offers</span></div>
+                                <div class="v1"><?= $data->name;?></div>
                                 <div class="v2">Lorem ipsum dolor sit amet, concateus.</div>
                               </div>
                             </figure>
                             <div class="caption">
-                              <div class="txt1"><span>Bahamas</span> 7 Night Tour</div>
-                              <div class="txt2">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming.</div>
+                              <div class="txt1"><?= $data->name;?></div>
+                              <div class="txt2 short-description"><?= $data->description;?></div>
                               <div class="txt3 clearfix">
                                 <div class="left_side">
                                   <div class="stars1">
@@ -265,156 +266,7 @@
                           </div>
                         </div>
                       </li>
-                      <li>
-                        <div class="popular">
-                          <div class="popular_inner">
-                            <figure>
-                              <img src="<?php echo base_url(); ?>admin/assets/images/popular02.jpg" alt="" class="img-responsive">
-                              <div class="over">
-                                <div class="v1">Mediterranean <span>17 Deal Offers</span></div>
-                                <div class="v2">Lorem ipsum dolor sit amet, concateus.</div>
-                              </div>
-                            </figure>
-                            <div class="caption">
-                              <div class="txt1"><span>Mediterranean</span> 18 Night Tour</div>
-                              <div class="txt2">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming.</div>
-                              <div class="txt3 clearfix">
-                                <div class="left_side">
-                                  <div class="stars1">
-                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
-                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
-                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
-                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
-                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
-                                  </div>
-                                  <div class="nums">- 168 Reviews</div>
-                                </div>
-                                <div class="right_side"><a href="#" class="btn-default btn1">See All</a></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="popular">
-                          <div class="popular_inner">
-                            <figure>
-                              <img src="<?php echo base_url(); ?>admin/assets/images/popular03.jpg" alt="" class="img-responsive">
-                              <div class="over">
-                                <div class="v1">Greece <span>17 Deal Offers</span></div>
-                                <div class="v2">Lorem ipsum dolor sit amet, concateus.</div>
-                              </div>
-                            </figure>
-                            <div class="caption">
-                              <div class="txt1"><span>Greece</span> 6 Night Tour</div>
-                              <div class="txt2">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming.</div>
-                              <div class="txt3 clearfix">
-                                <div class="left_side">
-                                  <div class="stars1">
-                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
-                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
-                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
-                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
-                                    <img src="<?php echo base_url(); ?>admin/assets/images/star2.png" alt="">
-                                  </div>
-                                  <div class="nums">- 16 Reviews</div>
-                                </div>
-                                <div class="right_side"><a href="#" class="btn-default btn1">See All</a></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="popular">
-                          <div class="popular_inner">
-                            <figure>
-                              <img src="<?php echo base_url(); ?>admin/assets/images/popular01.jpg" alt="" class="img-responsive">
-                              <div class="over">
-                                <div class="v1">Bahamas <span>17 Deal Offers</span></div>
-                                <div class="v2">Lorem ipsum dolor sit amet, concateus.</div>
-                              </div>
-                            </figure>
-                            <div class="caption">
-                              <div class="txt1"><span>Bahamas</span> 7 Night Tour</div>
-                              <div class="txt2">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming.</div>
-                              <div class="txt3 clearfix">
-                                <div class="left_side">
-                                  <div class="stars1">
-                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
-                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
-                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
-                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
-                                    <img src="<?php echo base_url(); ?>admin/assets/images/star2.png" alt="">
-                                  </div>
-                                  <div class="nums">- 18 Reviews</div>
-                                </div>
-                                <div class="right_side"><a href="#" class="btn-default btn1">See All</a></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="popular">
-                          <div class="popular_inner">
-                            <figure>
-                              <img src="<?php echo base_url(); ?>admin/assets/images/popular02.jpg" alt="" class="img-responsive">
-                              <div class="over">
-                                <div class="v1">Mediterranean <span>17 Deal Offers</span></div>
-                                <div class="v2">Lorem ipsum dolor sit amet, concateus.</div>
-                              </div>
-                            </figure>
-                            <div class="caption">
-                              <div class="txt1"><span>Mediterranean</span> 18 Night Tour</div>
-                              <div class="txt2">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming.</div>
-                              <div class="txt3 clearfix">
-                                <div class="left_side">
-                                  <div class="stars1">
-                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
-                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
-                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
-                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
-                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
-                                  </div>
-                                  <div class="nums">- 168 Reviews</div>
-                                </div>
-                                <div class="right_side"><a href="#" class="btn-default btn1">See All</a></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="popular">
-                          <div class="popular_inner">
-                            <figure>
-                              <img src="<?php echo base_url(); ?>admin/assets/images/popular03.jpg" alt="" class="img-responsive">
-                              <div class="over">
-                                <div class="v1">Greece <span>17 Deal Offers</span></div>
-                                <div class="v2">Lorem ipsum dolor sit amet, concateus.</div>
-                              </div>
-                            </figure>
-                            <div class="caption">
-                              <div class="txt1"><span>Greece</span> 6 Night Tour</div>
-                              <div class="txt2">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming.</div>
-                              <div class="txt3 clearfix">
-                                <div class="left_side">
-                                  <div class="stars1">
-                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
-                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
-                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
-                                    <img src="<?php echo base_url(); ?>admin/assets/images/star1.png" alt="">
-                                    <img src="<?php echo base_url(); ?>admin/assets/images/star2.png" alt="">
-                                  </div>
-                                  <div class="nums">- 16 Reviews</div>
-                                </div>
-                                <div class="right_side"><a href="#" class="btn-default btn1">See All</a></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
+                      <?php endforeach; ?>
                     </ul>
                   </div>
                 </div>

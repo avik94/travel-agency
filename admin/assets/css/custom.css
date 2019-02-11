@@ -55,3 +55,6 @@
 .disableInput{
   display:none!important;
 }
+.short-description{
+  min-height: 145px;
+}

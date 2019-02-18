@@ -26,6 +26,35 @@ class Main extends CI_Controller {
 		$data['navigationLink'] = $this->Model->getTableDataForOneRow("ta18_footer_part2");//footerData
 		$this->load->template('common/header','about','common/footer', $data);
 	}
+	// contact page
+	public function contact(){
+		$data['active']='contact';
+		$data['siteData'] = $this->Model->getOneRow('sitedata');
+		$data['siteAddress'] = $this->Model->getOneRow('address'); //site address
+		$data['footerDetails'] = $this->Model->getTableDataForOneRow("ta18_footer_part1");//footerData
+		$data['navigationLink'] = $this->Model->getTableDataForOneRow("ta18_footer_part2");//footerData
+		// echo "<pre>";
+		// print_r($data);
+		$this->load->template('common/header','contact','common/footer', $data);
+	}
+	public function contactFormSubmit(){
+		$this->load->helper(array('form', 'url'));
+		$this->load->library('form_validation');
+		$this->form_validation->set_rules('name', 'Name', 'required');
+		$this->form_validation->set_rules('email', 'Email', 'required');
+		$this->form_validation->set_rules('content', 'Content', 'required');
+
+		if ($this->form_validation->run() == FALSE){
+			echo "error";
+		}else{
+			$data["name"] = $this->input->post("name");
+			$data["email"] = $this->input->post("email");
+			$data["message"] = $this->input->post("content");
+			$this->Model->inserData("user_submited",$data);
+			echo "Submitted";
+		}
+
+	}
 	// destination page
 	public function destination(){
 		$data['active']='destination';  //header data

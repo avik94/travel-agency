@@ -62,3 +62,4 @@ $route['single-location/(:any)'] ="Main/sigleLocationDetail";
 $route['search-result'] ="Main/searchForm";
 $route['hotels'] = "Main/singleHotel";
 $route['hotels/(:any)'] = "Main/singleHotel/$1";
+$route['contact'] = "Main/contact";

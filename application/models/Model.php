@@ -39,8 +39,10 @@ class Model extends CI_Model {
 	public function getSpecificColField($selectedCol,$tableName,$target){
 		$this->db->select($selectedCol);
 		$data = $this->db->get_where($tableName,$target)->row();
-
 		return $data;
+	}
+	public function inserData($tableName,$data){
+		$this->db->insert($tableName,$data);
 	}
 	// public function joinLocationDestination(){
 	// 	$this->db->select('*');

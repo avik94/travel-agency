@@ -93,7 +93,7 @@
                 <li><a href="#">Gallery</a></li>
                 <li <?php if($active == 'destination'): echo 'class="active"'; endif; ?>><a href="<?= base_url();?>destinations">Destinations</a></li>
                 <li><a href="hotels.html">Hotels</a></li>
-                <li><a href="contacts.html">Contacts</a></li>
+                <li <?php if($active == 'contact'): echo 'class="active"';endif; ?>><a href="<?php base_url(); ?>contact">Contacts</a></li>
               </ul>
             </div>
           </div>
